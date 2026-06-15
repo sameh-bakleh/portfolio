@@ -36,7 +36,7 @@ export const site = {
   phone: "+49 177 797 7187",
   location: "Bochum, Germany",
   linkedin: "https://www.linkedin.com/in/sameh-bakleh-b177b1189",
-  github: "https://github.com/samhbk",
+  github: "https://github.com/sameh-bakleh",
   portfolio: "https://sameh-bakleh-portfolio.vercel.app",
   workAuth:
     "Chancenkarte (Opportunity Card) valid until January 2027; eligible for German work residence permit or EU Blue Card with qualifying job offer",
@@ -347,7 +347,7 @@ export const iosProjects: ProjectItem[] = [
       "Production-style iOS marketplace client demonstrating product listing flows, authentication, favorites, pagination, API integration, local state handling, and clean mobile architecture.",
     stack: ["Swift", "SwiftUI", "MVVM", "REST APIs", "Authentication", "Keychain", "Pagination", "Local Cache"],
     highlight: "iOS / Mobile",
-    repo: "https://github.com/samhbk/ios-marketplace-product-app",
+    repo: "https://github.com/sameh-bakleh/ios-marketplace-product-app",
     badge: "Portfolio sample",
     category: "ios",
     proves: [
@@ -365,7 +365,7 @@ export const iosProjects: ProjectItem[] = [
       "Real-time iOS chat client focused on message states, local persistence, offline-aware UX, attachment handling, retry behaviour, and testable mobile state management.",
     stack: ["Swift", "UIKit", "Local Persistence", "Message States", "Offline UX", "Retry Logic"],
     highlight: "iOS / Mobile",
-    repo: "https://github.com/samhbk/ios-realtime-offline-chat",
+    repo: "https://github.com/sameh-bakleh/ios-realtime-offline-chat",
     badge: "Portfolio sample",
     category: "ios",
     proves: [
@@ -386,7 +386,7 @@ export const backendProjects: ProjectItem[] = [
       "Laravel recruitment platform API covering job listings, candidate applications, employer workflows, authentication, RBAC, validation, caching, and API documentation.",
     stack: ["Laravel", "PHP", "REST APIs", "RBAC", "MySQL", "Redis", "OpenAPI", "Docker"],
     highlight: "Backend / API",
-    repo: "https://github.com/samhbk/laravel-recruitment-platform-api",
+    repo: "https://github.com/sameh-bakleh/laravel-recruitment-platform-api",
     badge: "Portfolio sample",
     category: "backend",
     proves: [
@@ -404,7 +404,7 @@ export const backendProjects: ProjectItem[] = [
       "Laravel booking API demonstrating reservation workflows, availability checks, validation, API versioning, caching, and testable backend logic.",
     stack: ["Laravel", "PHP", "JWT / Sanctum", "Redis", "Swagger", "Docker"],
     highlight: "Backend / API",
-    repo: "https://github.com/samhbk/booking-system-api-showcase",
+    repo: "https://github.com/sameh-bakleh/booking-system-api-showcase",
     badge: "Portfolio sample",
     category: "backend",
     proves: [
@@ -421,7 +421,7 @@ export const backendProjects: ProjectItem[] = [
       "Laravel integration API for e-commerce and ERP workflows, using webhooks, queues, retry logic, HMAC signing, audit logging, and Docker-based setup.",
     stack: ["Laravel", "Queues", "Webhooks", "HMAC", "Redis", "Docker", "PHPUnit"],
     highlight: "Backend / API",
-    repo: "https://github.com/samhbk/laravel-ecommerce-erp-integration-api",
+    repo: "https://github.com/sameh-bakleh/laravel-ecommerce-erp-integration-api",
     badge: "Portfolio sample",
     category: "backend",
     proves: [
@@ -452,12 +452,12 @@ export const githubProofGroups: GitHubProofGroup[] = [
       {
         name: "ios-marketplace-product-app",
         proof: "API-backed SwiftUI marketplace client with auth, pagination, and MVVM architecture.",
-        repo: "https://github.com/samhbk/ios-marketplace-product-app",
+        repo: "https://github.com/sameh-bakleh/ios-marketplace-product-app",
       },
       {
         name: "ios-realtime-offline-chat",
         proof: "UIKit chat client with message states, offline UX, persistence, and retry logic.",
-        repo: "https://github.com/samhbk/ios-realtime-offline-chat",
+        repo: "https://github.com/sameh-bakleh/ios-realtime-offline-chat",
       },
     ],
   },
@@ -467,17 +467,17 @@ export const githubProofGroups: GitHubProofGroup[] = [
       {
         name: "laravel-recruitment-platform-api",
         proof: "Laravel recruitment API with RBAC, listings, applications, and OpenAPI.",
-        repo: "https://github.com/samhbk/laravel-recruitment-platform-api",
+        repo: "https://github.com/sameh-bakleh/laravel-recruitment-platform-api",
       },
       {
         name: "booking-system-api-showcase",
         proof: "Laravel booking workflows with availability checks and API versioning.",
-        repo: "https://github.com/samhbk/booking-system-api-showcase",
+        repo: "https://github.com/sameh-bakleh/booking-system-api-showcase",
       },
       {
         name: "laravel-ecommerce-erp-integration-api",
         proof: "ERP integration with webhooks, queues, HMAC signing, and audit logging.",
-        repo: "https://github.com/samhbk/laravel-ecommerce-erp-integration-api",
+        repo: "https://github.com/sameh-bakleh/laravel-ecommerce-erp-integration-api",
       },
     ],
   },
@@ -487,12 +487,17 @@ export const githubProofGroups: GitHubProofGroup[] = [
       {
         name: "android-marketplace-client",
         proof: "Kotlin marketplace client — cross-platform API integration reference.",
-        repo: "https://github.com/samhbk/android-marketplace-client",
+        repo: "https://github.com/sameh-bakleh/android-marketplace-client",
+      },
+      {
+        name: "symfony-marketplace-api",
+        proof: "Symfony marketplace REST API — JWT auth, Doctrine, cart, orders, OpenAPI.",
+        repo: "https://github.com/sameh-bakleh/symfony-marketplace-api",
       },
       {
         name: "portfolio",
         proof: "This portfolio site — Next.js, TypeScript, Tailwind.",
-        repo: "https://github.com/samhbk/portfolio",
+        repo: "https://github.com/sameh-bakleh/portfolio",
       },
     ],
   },
