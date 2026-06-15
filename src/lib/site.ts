@@ -510,6 +510,26 @@ export const navItems = [
   { id: "contact", label: "Contact", file: "contact.sh" },
 ] as const;
 
+/** Primary header links — always visible on large screens */
+export const headerNavPrimary = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "ios-work", label: "iOS" },
+  { id: "backend-apis", label: "APIs" },
+  { id: "skills", label: "Skills" },
+  { id: "contact", label: "Contact" },
+] as const;
+
+/** Shown in header “More” menu and mobile drawer */
+export const headerNavSecondary = [
+  { id: "experience", label: "Experience" },
+  { id: "github-proof", label: "GitHub Proof" },
+  { id: "shipped", label: "Shipped Apps" },
+] as const;
+
+/** Short line under name in header — avoid long subtitle truncation */
+export const headerRoleLine = "Senior iOS Engineer";
+
 export const loadedModules = [
   "SWIFT",
   "SWIFTUI",
