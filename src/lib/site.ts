@@ -41,7 +41,7 @@ export const site = {
   location: "Bochum, Germany",
   linkedin: "https://www.linkedin.com/in/sameh-bakleh-b177b1189",
   github: "https://github.com/sameh-bakleh",
-  portfolio: "https://sameh-bakleh-portfolio.vercel.app",
+  portfolio: "https://sameh-bakleh.vercel.app",
   workAuth:
     "Chancenkarte (Opportunity Card) valid until January 2027; eligible for German work residence permit or EU Blue Card with qualifying job offer",
   availability: "Open to work",
