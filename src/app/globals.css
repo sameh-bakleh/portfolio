@@ -114,6 +114,21 @@ body {
   color: transparent;
 }
 
+.text-gradient-brand-animated {
+  background-size: 220% auto;
+  animation: gradient-shift 9s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 /** Gradient rules (section separators, accents) */
 .bg-gradient-rule {
   background: linear-gradient(90deg, var(--primary), var(--secondary), var(--tertiary));
