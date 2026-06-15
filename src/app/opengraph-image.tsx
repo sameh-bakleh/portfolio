@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
-import { metaTitle, roleSubtitle, site } from "@/lib/site";
+import { metaDescription, roleSubtitle, site, socialCardTitle } from "@/lib/site";
 
-export const alt = `${site.name} — ${metaTitle}`;
+export const alt = `${site.name} — ${socialCardTitle}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -48,7 +48,7 @@ export default function OpenGraphImage() {
             {roleSubtitle}
           </div>
           <div style={{ fontSize: 24, lineHeight: 1.4, color: "#c4b5fd", maxWidth: 920 }}>
-            {metaTitle}
+            {metaDescription.length > 120 ? `${metaDescription.slice(0, 117)}…` : metaDescription}
           </div>
         </div>
 

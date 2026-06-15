@@ -9,14 +9,18 @@ export const heroSubtitle =
 export const availabilityLine =
   "Based in Bochum, Germany. Open to English-speaking iOS Developer, Senior iOS Engineer, Mobile Engineer, PHP Developer, Laravel Developer, Symfony Developer, Backend Developer, Backend Engineer, and Software Engineer roles across Germany and Europe.";
 
-export const metaTitle = "Senior Software Engineer · APIs, Mobile & Platforms | Germany";
+export const metaTitle = "Senior Mobile Engineer & PHP/Laravel Backend API Developer";
+
+export const seoTitle =
+  "Sameh Bakleh | Senior Mobile Engineer & PHP/Laravel Backend API Developer";
 
 export const metaDescription =
-  "Senior Software Engineer in Bochum, Germany. 5+ years iOS/Swift, 5+ years PHP/Laravel APIs & admin systems. Swift, SwiftUI, UIKit, Laravel, Symfony, REST APIs, mobile and backend delivery.";
+  "Senior Mobile Engineer based in Bochum, Germany, with strong PHP/Laravel backend API experience. Swift, SwiftUI, UIKit, MVVM, REST APIs, App Store delivery, Laravel, Redis, Docker, and API contracts.";
 
-export const roleSubtitle = "Senior software engineer · APIs, mobile & platforms · Germany";
+export const roleSubtitle =
+  "Senior iOS engineer with PHP/Laravel backend API depth · Germany";
 
-export const socialCardTitle = "Senior Software Engineer · iOS & PHP Backend";
+export const socialCardTitle = "Senior Mobile Engineer · PHP/Laravel Backend APIs";
 
 export const proofBadges = [
   "5+ Years iOS · Swift",

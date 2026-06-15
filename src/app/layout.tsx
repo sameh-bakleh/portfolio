@@ -3,8 +3,8 @@ import { JetBrains_Mono, Roboto } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
-import { metaDescription, metaTitle, site, socialCardTitle } from "@/lib/site";
-import { getSiteUrl } from "@/lib/site-url";
+import { metaDescription, seoTitle, site, socialCardTitle } from "@/lib/site";
+import { absoluteUrl, getSiteUrl } from "@/lib/site-url";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -26,7 +26,7 @@ const googleVerification =
 export const metadata: Metadata = {
   metadataBase: new URL(canonicalUrl),
   title: {
-    default: `${site.name} | ${metaTitle}`,
+    default: seoTitle,
     template: `%s | ${site.name}`,
   },
   description: metaDescription,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: `${site.name} | ${socialCardTitle}`,
+    title: seoTitle,
     description: metaDescription,
     type: "website",
     url: canonicalUrl,
@@ -51,18 +51,18 @@ export const metadata: Metadata = {
     locale: "en_DE",
     images: [
       {
-        url: "/opengraph-image",
+        url: absoluteUrl("/opengraph-image"),
         width: 1200,
         height: 630,
-        alt: `${site.name} — ${metaTitle}`,
+        alt: `${site.name} — ${socialCardTitle}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} | ${socialCardTitle}`,
+    title: seoTitle,
     description: metaDescription,
-    images: ["/opengraph-image"],
+    images: [absoluteUrl("/opengraph-image")],
   },
   robots: {
     index: true,
@@ -75,20 +75,6 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  keywords: [
-    "Sameh Bakleh",
-    "Senior Software Engineer Germany",
-    "iOS Developer Germany",
-    "Mobile Engineer Germany",
-    "Swift Developer Germany",
-    "PHP Backend Developer Germany",
-    "Laravel Developer Germany",
-    "Symfony Developer Germany",
-    "Backend Engineer Germany",
-    "Software Engineer Bochum",
-    "iOS Engineer Germany",
-    "Laravel API Developer",
-  ],
   verification: {
     google: googleVerification,
   },
@@ -114,7 +100,7 @@ const structuredData = {
       "@type": "Person",
       "@id": `${canonicalUrl}/#person`,
       name: site.name,
-      jobTitle: "Senior Software Engineer · iOS & PHP Backend",
+      jobTitle: "Senior Mobile Engineer · PHP/Laravel Backend APIs",
       email: site.email,
       url: canonicalUrl,
       address: {
@@ -128,21 +114,20 @@ const structuredData = {
         "Swift",
         "SwiftUI",
         "UIKit",
+        "MVVM",
         "iOS Development",
-        "Android Development",
         "Mobile Engineering",
         "Laravel",
-        "Symfony",
         "PHP",
         "REST APIs",
-        "API Design",
+        "Docker",
       ],
     },
     {
       "@type": "ProfilePage",
       "@id": `${canonicalUrl}/#profile`,
       url: canonicalUrl,
-      name: `${site.name} — ${metaTitle}`,
+      name: seoTitle,
       description: metaDescription,
       inLanguage: "en",
       isPartOf: { "@id": `${canonicalUrl}/#website` },
@@ -152,7 +137,7 @@ const structuredData = {
       "@type": "WebPage",
       "@id": `${canonicalUrl}/#webpage`,
       url: canonicalUrl,
-      name: `${site.name} | ${metaTitle}`,
+      name: seoTitle,
       description: metaDescription,
       inLanguage: "en",
       isPartOf: { "@id": `${canonicalUrl}/#website` },

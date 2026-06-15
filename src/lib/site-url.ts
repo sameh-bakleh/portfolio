@@ -1,12 +1,13 @@
 import { site } from "@/lib/site";
 
-/** Canonical production URL for metadata, sitemap, and robots. */
+/** Public portfolio URL — used for canonical, sitemap, and robots (no custom domain). */
+export const CANONICAL_SITE_URL = site.portfolio.replace(/\/$/, "");
+
 export function getSiteUrl(): string {
-  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-  if (fromEnv) return fromEnv.replace(/\/$/, "");
+  return CANONICAL_SITE_URL;
+}
 
-  const vercel = process.env.VERCEL_URL?.trim();
-  if (vercel) return `https://${vercel.replace(/\/$/, "")}`;
-
-  return site.portfolio.replace(/\/$/, "");
+export function absoluteUrl(path = "/"): string {
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return normalized === "/" ? CANONICAL_SITE_URL : `${CANONICAL_SITE_URL}${normalized}`;
 }
