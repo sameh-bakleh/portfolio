@@ -39,7 +39,7 @@ export const site = {
   email: "samhbkeng1992@gmail.com",
   phone: "+49 177 797 7187",
   location: "Bochum, Germany",
-  linkedin: "https://www.linkedin.com/in/sameh-bakleh-b177b1189",
+  linkedin: "https://www.linkedin.com/in/sameh-bakleh/",
   github: "https://github.com/sameh-bakleh",
   portfolio: "https://sameh-bakleh.vercel.app",
   workAuth:
