@@ -19,7 +19,9 @@ const jetbrains = JetBrains_Mono({
 });
 
 const canonicalUrl = getSiteUrl();
-const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+const googleVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() ??
+  "4Dhs-PzRyr2tE0o78YMN7fTx7pQidIP30Vn9RUcUot0";
 
 export const metadata: Metadata = {
   metadataBase: new URL(canonicalUrl),
@@ -87,7 +89,9 @@ export const metadata: Metadata = {
     "iOS Engineer Germany",
     "Laravel API Developer",
   ],
-  ...(googleVerification ? { verification: { google: googleVerification } } : {}),
+  verification: {
+    google: googleVerification,
+  },
 };
 
 export const viewport: Viewport = {
