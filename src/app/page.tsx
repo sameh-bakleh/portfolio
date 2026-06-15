@@ -4,11 +4,12 @@ import { ScrollProgress } from "@/components/ScrollProgress";
 import { TerminalHeader } from "@/components/TerminalHeader";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
+import { IosWorkSection } from "@/components/IosWorkSection";
+import { BackendWorkSection } from "@/components/BackendWorkSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
-import { ProjectsSection } from "@/components/ProjectsSection";
+import { GitHubProofSection } from "@/components/GitHubProofSection";
 import { ShowcaseSection } from "@/components/ShowcaseSection";
-import { StatsSection } from "@/components/StatsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { CommandPalette } from "@/components/CommandPalette";
@@ -24,11 +25,12 @@ export default function Home() {
       <main className="relative z-[60]">
         <HeroSection />
         <AboutSection />
+        <IosWorkSection />
+        <BackendWorkSection />
         <SkillsSection />
         <ExperienceSection />
-        <ProjectsSection />
+        <GitHubProofSection />
         <ShowcaseSection />
-        <StatsSection />
         <ContactSection />
       </main>
       <Footer />

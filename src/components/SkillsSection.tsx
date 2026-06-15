@@ -14,14 +14,14 @@ export function SkillsSection() {
     <section id="skills" className="scroll-mt-24 border-b border-outline-variant/35 px-4 py-20 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          step="02"
-          kicker="APIs and data first, then mobile and web delivery — native, Flutter, and integration with the services behind them."
+          step="04"
+          kicker="Grouped for recruiter scan — iOS first, backend/API depth second, no noise."
         >
           ## Skills<span className="text-on-surface-variant">.json</span>
         </SectionTitle>
 
         <motion.div
-          className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-5 md:grid-cols-2 xl:grid-cols-3"
           variants={sContainer}
           initial="hidden"
           whileInView="visible"

@@ -15,44 +15,30 @@ export function ExperienceSection() {
     <section id="experience" className="scroll-mt-24 border-b border-outline-variant/35 px-4 py-20 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          step="03"
-          kicker="Backend services, mobile delivery, and team leadership — production systems, not slides."
+          step="05"
+          kicker="Concise timeline aligned with LinkedIn and CVs — hands-on mobile and backend delivery."
         >
-          $ git log --stat --oneline
+          $ git log --oneline
         </SectionTitle>
 
         <motion.div
-          className="space-y-10"
+          className="space-y-6"
           variants={sContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-12%" }}
         >
-          {experience.map((job, index) => (
-            <motion.div
-              key={job.id}
-              variants={sItem}
-              whileHover={reduce ? undefined : { y: -5 }}
-              transition={springLift}
-            >
-              <TerminalWindow
-                title={`commit ${job.id.slice(0, 6)}`}
-                path={`refs/heads/${job.company.toLowerCase().replace(/\s/g, "-")}`}
-              >
+          {experience.map((job) => (
+            <motion.div key={job.id} variants={sItem} whileHover={reduce ? undefined : { y: -4 }} transition={springLift}>
+              <TerminalWindow title={job.id} path={`~/experience/${job.company.toLowerCase().replace(/\s/g, "-")}`}>
                 <div className="font-mono text-xs sm:text-sm">
-                  <div className="mb-4 flex flex-wrap items-baseline gap-2 border-b border-outline-variant/40 pb-3 text-on-surface-variant">
+                  <div className="mb-2 flex flex-wrap items-baseline gap-2 text-on-surface-variant">
                     <span className="text-primary/90">{job.period}</span>
                     <span className="text-outline/80">·</span>
-                    <span>{job.location}</span>
+                    <span>{job.company}</span>
                   </div>
-                  <h3 className="mb-1 text-base font-semibold text-on-surface">
-                    {job.title} @ {job.company}
-                  </h3>
-                  <ul className="mb-4 list-inside list-disc space-y-1.5 text-on-surface-variant">
-                    {job.bullets.map((b) => (
-                      <li key={b}>{b}</li>
-                    ))}
-                  </ul>
+                  <h3 className="mb-2 text-base font-semibold text-on-surface">{job.title}</h3>
+                  <p className="mb-4 max-w-3xl text-sm leading-relaxed text-on-surface-variant">{job.summary}</p>
                   <div className="flex flex-wrap gap-2">
                     {job.stack.map((t) => (
                       <span
@@ -63,9 +49,6 @@ export function ExperienceSection() {
                       </span>
                     ))}
                   </div>
-                  <p className="mt-4 text-[10px] text-on-surface-variant/80">
-                    {4 + index} files changed · +{280 + index * 40} insertions · −{12 + index * 3} deletions
-                  </p>
                 </div>
               </TerminalWindow>
             </motion.div>

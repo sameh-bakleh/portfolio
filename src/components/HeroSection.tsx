@@ -2,7 +2,16 @@
 
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { githubProfileHref, headline, heroCode, loadedModules, site } from "@/lib/site";
+import {
+  availabilityLine,
+  githubProfileHref,
+  headline,
+  heroCode,
+  heroSubtitle,
+  loadedModules,
+  proofBadges,
+  site,
+} from "@/lib/site";
 import { heroItem, heroStagger, springLift } from "@/lib/motion";
 import { BlinkingCursor } from "./BlinkingCursor";
 
@@ -40,11 +49,9 @@ export function HeroSection() {
   const codeOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.45]);
 
   const btnFilled =
-    "inline-flex min-h-11 shrink-0 items-center justify-center rounded-full bg-primary px-5 text-sm font-medium text-on-primary shadow-elevation-1 transition-[box-shadow,background-color] hover:shadow-elevation-2 active:shadow-elevation-1 sm:min-w-[8.75rem] sm:px-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/45 focus-visible:ring-offset-2 focus-visible:ring-offset-surface";
+    "inline-flex min-h-11 shrink-0 items-center justify-center rounded-full bg-primary px-5 text-sm font-medium text-on-primary shadow-elevation-1 transition-[box-shadow,background-color] hover:shadow-elevation-2 active:shadow-elevation-1 sm:px-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/45 focus-visible:ring-offset-2 focus-visible:ring-offset-surface";
   const btnOutlined =
-    "inline-flex min-h-11 shrink-0 items-center justify-center rounded-full border border-secondary/45 bg-transparent px-5 text-sm font-medium text-secondary transition-colors hover:bg-secondary/[0.1] sm:min-w-[8.75rem] sm:px-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-surface";
-  const linkText =
-    "inline-flex min-h-11 items-center justify-center rounded-full px-4 text-sm font-medium text-tertiary no-underline transition-colors hover:bg-tertiary/[0.1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tertiary/35 focus-visible:ring-offset-2 focus-visible:ring-offset-surface";
+    "inline-flex min-h-11 shrink-0 items-center justify-center rounded-full border border-secondary/45 bg-transparent px-5 text-sm font-medium text-secondary transition-colors hover:bg-secondary/[0.1] sm:px-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-surface";
 
   return (
     <section
@@ -57,37 +64,30 @@ export function HeroSection() {
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-          className="flex min-h-0 flex-col"
-        >
-          {/* Meta strip — compact, aligned to 4px grid */}
+        <motion.div initial="hidden" animate="visible" variants={containerVariants} className="flex min-h-0 flex-col">
           <motion.div
             variants={itemVariants}
             className="mb-7 inline-flex max-w-full flex-wrap items-center gap-x-3 gap-y-2 rounded-full border border-white/[0.08] bg-gradient-to-r from-violet-500/[0.12] via-surface-container-high/75 to-cyan-500/[0.1] py-2 pl-4 pr-4 shadow-elevation-1 shadow-glow-violet backdrop-blur-md sm:mb-9 sm:gap-x-4 sm:pl-5 sm:pr-5"
           >
             <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-on-surface-variant sm:text-[11px]">
-              &lt;Platform.Profile /&gt;
+              &lt;iOS.Profile /&gt;
             </span>
             <span className="hidden h-3 w-px bg-outline-variant/80 sm:block" aria-hidden />
             <span className="font-mono text-[11px] text-primary sm:text-xs">
-              while (<span className="text-secondary/95">serving</span>) {"{"} <span className="text-on-surface-variant/90">deploy</span>() {"}"}
+              while (<span className="text-secondary/95">shipping</span>) {"{"}{" "}
+              <span className="text-on-surface-variant/90">release</span>() {"}"}
             </span>
             <span className="hidden h-3 w-px bg-outline-variant/80 sm:block" aria-hidden />
             <span className="font-mono text-[10px] text-on-surface-variant sm:text-[11px]">
-              API <span className="text-secondary">· healthy</span>
+              Bochum <span className="text-secondary">· Germany</span>
             </span>
           </motion.div>
 
-          {/* lg+: copy + CTAs left, portfolio.tsx right (top-aligned). Mobile: single column, code after CTAs. */}
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-10 xl:gap-12">
             <div className="min-w-0">
-              {/* Name = primary focal point; headline = supporting h2 */}
               <motion.h1
                 variants={itemVariants}
-                className="mb-4 max-w-[20ch] text-4xl font-bold leading-[1.02] tracking-[-0.02em] sm:mb-5 sm:max-w-none sm:text-5xl sm:leading-[1.01] sm:tracking-tight md:text-6xl md:leading-[0.99] lg:mb-6 lg:text-7xl lg:leading-[0.98]"
+                className="mb-4 max-w-[20ch] text-4xl font-bold leading-[1.02] tracking-[-0.02em] sm:mb-5 sm:max-w-none sm:text-5xl sm:leading-[1.01] sm:tracking-tight md:text-6xl md:leading-[0.99] lg:mb-5 lg:text-7xl lg:leading-[0.98]"
               >
                 <span className="text-gradient-brand drop-shadow-[0_0_40px_rgba(52,211,153,0.15)]">
                   {site.name}
@@ -95,23 +95,47 @@ export function HeroSection() {
               </motion.h1>
               <motion.h2
                 variants={itemVariants}
-                className="mb-6 max-w-[52rem] text-base font-semibold leading-snug text-on-surface/95 sm:mb-7 sm:text-lg sm:leading-snug md:text-xl md:leading-snug lg:mb-8 lg:text-2xl lg:leading-tight [&::selection]:bg-secondary/30 [&::selection]:text-on-surface"
+                className="mb-5 max-w-[52rem] text-lg font-semibold leading-snug text-on-surface sm:text-xl md:text-2xl md:leading-tight"
               >
                 {headline}
               </motion.h2>
 
               <motion.p
                 variants={itemVariants}
-                className="mb-7 max-w-prose rounded-shape-xl border border-violet-400/25 bg-gradient-to-br from-surface-container/90 via-surface-container-low/95 to-cyan-950/30 px-4 py-3.5 text-[0.9375rem] leading-[1.65] text-on-surface-variant shadow-elevation-1 shadow-glow-cyan backdrop-blur-sm sm:mb-9 sm:px-5 sm:py-4 sm:text-base sm:leading-relaxed"
+                className="mb-5 max-w-prose text-[0.9375rem] leading-[1.65] text-on-surface-variant sm:text-base sm:leading-relaxed"
               >
-                <span className="mr-1.5 font-mono text-sm font-medium text-secondary">&lt;Backend · Mobile /&gt;</span>
-                {site.tagline}
+                {heroSubtitle}
+              </motion.p>
+
+              <motion.p
+                variants={itemVariants}
+                className="mb-7 max-w-prose rounded-shape-xl border border-violet-400/20 bg-surface-container-low/80 px-4 py-3 text-sm leading-relaxed text-on-surface/90 sm:mb-8"
+              >
+                {availabilityLine}
               </motion.p>
 
               <motion.div
                 variants={itemVariants}
-                className="mb-8 flex flex-wrap items-center gap-2 sm:mb-10 sm:gap-2.5 lg:mb-10"
+                className="mb-8 flex flex-wrap gap-2 sm:mb-10"
               >
+                {proofBadges.map((badge, i) => {
+                  const palette = [
+                    "border-primary/40 bg-primary/[0.07] text-primary",
+                    "border-secondary/35 bg-secondary/[0.06] text-secondary",
+                    "border-tertiary/35 bg-tertiary/[0.08] text-tertiary",
+                  ];
+                  return (
+                    <span
+                      key={badge}
+                      className={`rounded-full border px-3 py-1.5 font-mono text-[10px] font-medium sm:text-[11px] ${palette[i % 3]}`}
+                    >
+                      {badge}
+                    </span>
+                  );
+                })}
+              </motion.div>
+
+              <motion.div variants={itemVariants} className="mb-8 flex flex-wrap items-center gap-2 sm:mb-10 sm:gap-2.5">
                 <span className="w-full font-mono text-[10px] font-medium uppercase tracking-wider text-on-surface-variant sm:mb-0 sm:mr-1 sm:inline sm:w-auto">
                   Core stack
                 </span>
@@ -126,7 +150,7 @@ export function HeroSection() {
                       key={m}
                       whileHover={reduce ? undefined : { y: -2 }}
                       transition={springLift}
-                      className={`cursor-default rounded-full border px-3 py-1.5 font-mono text-[10px] font-medium sm:px-3.5 sm:py-1.5 sm:text-[11px] ${palette[i % 3]}`}
+                      className={`cursor-default rounded-full border px-3 py-1.5 font-mono text-[10px] font-medium sm:px-3.5 sm:text-[11px] ${palette[i % 3]}`}
                     >
                       {m}
                     </motion.span>
@@ -135,56 +159,21 @@ export function HeroSection() {
               </motion.div>
 
               <motion.div variants={itemVariants} className="flex flex-col gap-2 sm:gap-2.5">
-                <p className="font-mono text-[10px] uppercase tracking-wider text-on-surface-variant">
-                  Get started
-                </p>
+                <p className="font-mono text-[10px] uppercase tracking-wider text-on-surface-variant">Get started</p>
                 <div className="flex flex-wrap gap-2.5 sm:gap-3">
-                  {site.resumeUrl?.trim() ? (
-                    <motion.a
-                      href={site.resumeUrl.trim()}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={reduce ? undefined : { y: -2 }}
-                      whileTap={reduce ? undefined : { scale: 0.98 }}
-                      transition={springLift}
-                      className={btnFilled}
-                    >
-                      Get resume
-                    </motion.a>
-                  ) : null}
-                  <motion.a
-                    href={`mailto:${site.email}?subject=${encodeURIComponent("Hello from your portfolio")}`}
-                    whileHover={reduce ? undefined : { y: -2 }}
-                    whileTap={reduce ? undefined : { scale: 0.98 }}
-                    transition={springLift}
-                    className={btnOutlined}
-                  >
-                    Send mail
+                  <motion.a href="#ios-work" whileHover={reduce ? undefined : { y: -2 }} whileTap={reduce ? undefined : { scale: 0.98 }} transition={springLift} className={btnFilled}>
+                    View iOS Work
+                  </motion.a>
+                  <motion.a href="#backend-apis" whileHover={reduce ? undefined : { y: -2 }} whileTap={reduce ? undefined : { scale: 0.98 }} transition={springLift} className={btnFilled}>
+                    View Backend APIs
                   </motion.a>
                   {githubHref ? (
-                    <motion.a
-                      href={githubHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={reduce ? undefined : { y: -2 }}
-                      whileTap={reduce ? undefined : { scale: 0.98 }}
-                      transition={springLift}
-                      className={btnFilled}
-                    >
+                    <motion.a href={githubHref} target="_blank" rel="noopener noreferrer" whileHover={reduce ? undefined : { y: -2 }} whileTap={reduce ? undefined : { scale: 0.98 }} transition={springLift} className={btnOutlined}>
                       GitHub
                     </motion.a>
                   ) : null}
-                  <motion.a
-                    href="#showcase"
-                    whileHover={reduce ? undefined : { y: -2 }}
-                    whileTap={reduce ? undefined : { scale: 0.98 }}
-                    transition={springLift}
-                    className={btnOutlined}
-                  >
-                    Live work
-                  </motion.a>
-                  <motion.a href="#projects" whileTap={reduce ? undefined : { scale: 0.98 }} className={linkText}>
-                    Codebase index
+                  <motion.a href={site.linkedin} target="_blank" rel="noopener noreferrer" whileHover={reduce ? undefined : { y: -2 }} whileTap={reduce ? undefined : { scale: 0.98 }} transition={springLift} className={btnOutlined}>
+                    LinkedIn
                   </motion.a>
                 </div>
               </motion.div>
@@ -193,14 +182,7 @@ export function HeroSection() {
             <motion.div
               variants={itemVariants}
               className="min-w-0 w-full lg:sticky lg:top-24 lg:self-start"
-              style={
-                reduce
-                  ? undefined
-                  : {
-                      y: codeY,
-                      opacity: codeOpacity,
-                    }
-              }
+              style={reduce ? undefined : { y: codeY, opacity: codeOpacity }}
             >
               <motion.div
                 whileHover={
@@ -220,9 +202,7 @@ export function HeroSection() {
                   <span className="truncate bg-gradient-to-r from-secondary to-tertiary bg-clip-text font-medium text-transparent">
                     engineer.ts
                   </span>
-                  <span className="shrink-0 tabular-nums text-[10px] sm:text-[11px]">
-                    Ln 1–{lines.length}
-                  </span>
+                  <span className="shrink-0 tabular-nums text-[10px] sm:text-[11px]">Ln 1–{lines.length}</span>
                 </div>
                 <pre className="overflow-x-auto whitespace-pre-wrap [-webkit-overflow-scrolling:touch]">
                   <code>

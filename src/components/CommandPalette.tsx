@@ -15,8 +15,6 @@ export function CommandPalette() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
-
-  const resume = site.resumeUrl?.trim();
   const githubHref = githubProfileHref();
 
   const entries: Entry[] = useMemo(
@@ -32,6 +30,18 @@ export function CommandPalette() {
         label: "Education & languages",
         hint: "about",
         href: "#education",
+      },
+      {
+        id: "ios",
+        label: "View iOS work",
+        hint: "featured",
+        href: "#ios-work",
+      },
+      {
+        id: "backend",
+        label: "View backend APIs",
+        hint: "featured",
+        href: "#backend-apis",
       },
       ...(githubHref
         ? [
@@ -55,18 +65,8 @@ export function CommandPalette() {
         hint: site.email,
         href: `mailto:${site.email}`,
       },
-      ...(resume
-        ? [
-            {
-              id: "cv",
-              label: "Open resume / CV",
-              hint: "pdf",
-              href: resume,
-            } satisfies Entry,
-          ]
-        : []),
     ],
-    [resume, githubHref],
+    [githubHref],
   );
 
   useEffect(() => {
@@ -210,20 +210,6 @@ export function CommandPalette() {
                 ))
               )}
             </ul>
-            <p className="border-t border-outline-variant/80 px-4 py-2 text-center text-[10px] text-on-surface-variant">
-              <kbd className="rounded border border-outline-variant px-1 font-mono">⌘</kbd>
-              <kbd className="ml-0.5 rounded border border-outline-variant px-1 font-mono">K</kbd>
-              <span className="mx-1">·</span>
-              Navigate like{" "}
-              <a
-                href="https://aadi.is-a.dev/"
-                className="text-primary underline-offset-2 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                aadi.is-a.dev
-              </a>
-            </p>
           </motion.div>
         </motion.div>
       ) : null}

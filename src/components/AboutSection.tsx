@@ -16,7 +16,7 @@ export function AboutSection() {
       <div className="mx-auto max-w-6xl">
         <SectionTitle
           step="01"
-          kicker="Engineering profile — backend systems and mobile leadership, education, languages, and how I work with teams."
+          kicker="Hands-on Senior iOS / Mobile Engineer with backend API depth — based in Bochum, Germany."
         >
           ## About<span className="text-on-surface-variant">.system</span>
         </SectionTitle>
@@ -85,6 +85,11 @@ export function AboutSection() {
                         <li key={l}>{l}</li>
                       ))}
                     </ul>
+                  </div>
+                  <div>
+                    <p className="mb-1 text-primary/85">➜ cat work_authorization.txt</p>
+                    <p className="text-on-surface-variant">{site.workAuth}</p>
+                    <p className="mt-2 text-on-surface-variant">{site.workMode}</p>
                   </div>
                 </div>
               </TerminalWindow>

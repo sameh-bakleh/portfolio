@@ -1,126 +1,119 @@
 /** Site content — edit social URLs here before deploy */
 
-/** Hero subtitle — backend + platform, with explicit mobile depth */
-export const headline =
-  "Software Engineer | Backend & APIs (Laravel, Symfony, REST) · Mobile (Kotlin/Android, Swift/iOS, Flutter) · Data (MySQL, PostgreSQL, Redis) · Docker · CI/CD | Germany";
+export const headline = "Senior iOS / Mobile Engineer with Backend API Depth";
 
-/** Shorter title for browser tab / SEO */
-export const metaTitle = "Software Engineer | Backend · Mobile · Laravel · Symfony · Kotlin · Flutter | Germany";
+export const heroSubtitle =
+  "I build production iOS applications with Swift, SwiftUI, UIKit, MVVM, Clean Architecture, REST APIs, offline-capable flows, testing, and App Store delivery — backed by strong PHP, Laravel, Symfony, Redis, Docker, and API contract experience.";
 
-/** One line for header / footer under your name */
-export const roleSubtitle = "Backend · Mobile · Software Engineer";
+export const availabilityLine =
+  "Based in Bochum, Germany. Open to English-speaking iOS, Mobile, PHP Backend, Laravel, Symfony, and API Engineering roles across Germany and Europe.";
 
-/** Open Graph / Twitter card title (keep concise) */
-export const socialCardTitle = "Software Engineer · Backend & Mobile";
+export const metaTitle = "Senior iOS Engineer & Backend API Developer in Germany";
+
+export const metaDescription =
+  "Senior iOS / Mobile Engineer based in Bochum, Germany. Swift, SwiftUI, UIKit, MVVM, REST APIs, offline-capable mobile flows, testing, App Store delivery, plus Laravel/Symfony backend API experience.";
+
+export const roleSubtitle = "Senior iOS / Mobile Engineer · Backend API Depth";
+
+export const socialCardTitle = "Senior iOS / Mobile Engineer";
+
+export const proofBadges = [
+  "8+ Years Software Engineering",
+  "iOS-first Mobile Engineering",
+  "Laravel / Symfony APIs",
+  "Based in Germany",
+  "English B2 · German A2 improving",
+] as const;
+
+export const productDomains =
+  "Production experience across domains such as ride-hailing, recruitment, real estate listings, fintech, marketplaces, and business platforms.";
 
 export const site = {
   name: "Sameh Bakleh",
-  tagline:
-    "Senior software engineer with strong backend and mobile experience — APIs and services (Laravel, Symfony, Node), data (SQL, Redis), Docker & CI/CD, plus Android, iOS, and Flutter in production. Former mobile team lead; open to senior backend, mobile, or hybrid engineering roles in Germany.",
+  tagline: heroSubtitle,
   email: "samhbkeng1992@gmail.com",
   phone: "+49 177 797 7187",
-  location: "Bochum, Germany (location flexible)",
+  location: "Bochum, Germany",
   linkedin: "https://www.linkedin.com/in/sameh-bakleh-b177b1189",
-  /** Full profile URL — not just https://github.com/ (breaks CTAs until set) */
   github: "https://github.com/samhbk",
-  workAuth: "Chancenkarte — Eligible to work in Germany",
-  availability: "Immediate",
-  /** Long-form availability for recruiters */
+  portfolio: "https://sameh-bakleh-portfolio.vercel.app",
+  workAuth:
+    "Chancenkarte (Opportunity Card) valid until January 2027; eligible for German work residence permit or EU Blue Card with qualifying job offer",
+  availability: "Open to work",
   availabilityDetail:
-    "I am flexible with starting date and could begin reasonably soon, depending on agreement.",
-  workMode: "Remote · Hybrid · On-site (Germany)",
-  operatorRole: "BACKEND_MOBILE_SWE",
-  /** Public CV (PDF/Drive, etc.) — leave empty to hide “Resume” in hero & command palette */
-  resumeUrl: "",
+    "Flexible start date — remote, hybrid, and on-site across Germany and the EU.",
+  workMode: "Remote · Hybrid · On-site (Germany & EU)",
+  operatorRole: "SENIOR_IOS_MOBILE_ENG",
 } as const;
 
-/** `null` when `site.github` is still the generic host (hide broken GitHub buttons). */
 export function githubProfileHref(): string | null {
   const normalized = site.github.replace(/\/+$/, "");
   if (normalized === "https://github.com") return null;
   return site.github;
 }
 
-/** About — backend + mobile leadership, accurate breadth */
 export const aboutParagraphs = [
-  "I am a software engineer with 7+ years of experience designing and shipping production backend systems, APIs, and data layers used by real users and partner teams.",
-  "On the server side I focus on Laravel and Symfony, REST API design, authentication (JWT/OAuth2), SQL (MySQL, PostgreSQL), Redis for cache and performance, and contracts that keep mobile, web, and internal clients predictable.",
-  "I also have deep mobile experience: I have led Android, iOS, and Flutter teams as a mobile team lead, shipped native and cross-platform apps (Kotlin/Jetpack/MVVM/Clean Architecture, Swift, Flutter/Bloc), and published multiple products to the App Store and Google Play — always in sync with the APIs and release trains behind them.",
-  "I automate delivery with Docker, GitLab CI/CD, and solid testing discipline, and I apply SOLID, clean architecture, and pragmatic API versioning so systems stay evolvable under load.",
-  "I mentor engineers, run architecture and code reviews, and own roadmaps from requirements through deployment — bridging backend and mobile when integration, performance, and store readiness matter.",
-  "Open to Senior / Staff Backend Engineer, Senior Mobile / Android / Flutter roles, Mobile Team Lead, or technical leadership in Germany (Remote, Hybrid, On-site).",
+  "I am a hands-on Senior Software Engineer based in Bochum, Germany, with 8+ years of experience across iOS/mobile applications and backend/API systems.",
+  "My primary focus is iOS / Mobile Engineering — app features, API-backed flows, offline-capable behaviour, clean architecture, testing, performance work, and release-ready mobile delivery.",
+  "My secondary strength is PHP Backend / API Engineering with Laravel, Symfony, REST APIs, authentication, RBAC, Redis, Docker, OpenAPI, and database workflows.",
+  "I work best close to the code: building features, debugging complex issues, integrating APIs, improving architecture, reviewing code, and shipping maintainable software for real users.",
+  `${productDomains} Public portfolio repositories demonstrate engineering approach; store listings reflect shipped product work.`,
 ] as const;
 
 export const education =
   "B.Sc. Software Engineering — Yarmouk Private University (2010–2016) · GPA 3.2/4.0";
 
 export const languages = [
-  "Arabic — Native / Bilingual",
-  "English — Professional working proficiency",
-  "German — A2 (improving)",
+  "Arabic — Native",
+  "English — B2 (professional working proficiency)",
+  "German — A2 (elementary, actively improving)",
 ] as const;
 
 export const openToRoles = [
-  "Senior Backend Engineer",
-  "Software Engineer (Backend / Full-stack)",
-  "Mobile Team Lead",
-  "Senior Mobile Engineer",
-  "Senior Android Engineer (Kotlin)",
-  "Flutter Developer",
-  "Technical Lead (Engineering)",
-  "Platform / API Engineer",
+  "Senior iOS Engineer",
+  "iOS Developer",
+  "iOS Engineer",
+  "Swift Developer",
+  "Mobile Engineer",
+  "Backend Engineer",
+  "API Engineer",
+  "PHP Developer",
+  "Laravel Developer",
+  "Symfony Developer",
+  "Software Engineer",
 ] as const;
 
 export type PublishedApp = { name: string; url: string; note?: string };
 
 export const publishedMobileIntro =
-  "Mobile is a first-class part of my experience — team leadership, native and Flutter, store releases, and real user scale. Representative App Store & Play listings:";
+  "App Store releases I contributed to as a hands-on engineer. Portfolio repositories on this site are production-style engineering samples for technical review — not private client source code.";
 
 export const publishedMobileAppsIos: PublishedApp[] = [
-  { name: "Petra Ride", url: "https://apps.apple.com/ee/app/petra-ride/id1463809354" },
-  { name: "Forsa", url: "https://apps.apple.com/us/app/forsa/id6737195314" },
-  { name: "MEA Real Estate", url: "https://apps.apple.com/us/app/mea-real-estate/id6444905425" },
+  { name: "Petra Ride", url: "https://apps.apple.com/ee/app/petra-ride/id1463809354", note: "Ride-hailing" },
+  { name: "Forsa", url: "https://apps.apple.com/us/app/forsa/id6737195314", note: "Recruitment" },
+  { name: "MEA Real Estate", url: "https://apps.apple.com/us/app/mea-real-estate/id6444905425", note: "Listings" },
   {
     name: "Tareeq (طريق)",
     url: "https://apps.apple.com/us/app/%D8%B7%D8%B1%D9%8A%D9%82/id6738869040",
+    note: "Ride booking",
   },
 ];
 
 export const publishedMobileAppsAndroid: PublishedApp[] = [
   {
-    name: "Adde Dollar",
-    note: "Currency & Commodities Tracker · 1M+ downloads",
-    url: "https://play.google.com/store/apps/details?id=com.dollarade.ade",
-  },
-  {
     name: "Petra Ride",
-    note: "Ride-hailing & delivery · 1M+ downloads",
+    note: "Ride-hailing · 1M+ downloads",
     url: "https://play.google.com/store/apps/details?id=com.PetraRide_User",
   },
   {
-    name: "Tareeq",
-    note: "Ride booking & delivery platform",
-    url: "https://play.google.com/store/apps/details?id=com.syweb.tareeq",
-  },
-  {
     name: "Forsa",
-    note: "Recruitment platform",
+    note: "Recruitment",
     url: "https://play.google.com/store/apps/details?id=com.sy.forsa",
-  },
-  {
-    name: "MEA Real Estate",
-    note: "Property search",
-    url: "https://play.google.com/store/apps/details?id=tech.cloudsystems.mearealestate",
-  },
-  {
-    name: "Campnsea",
-    note: "Outdoor e-commerce",
-    url: "https://play.google.com/store/apps/details?id=campnsea.android.app",
   },
 ];
 
 export const publishedMobileOutro =
-  "Strong integration mindset — auth, pagination, caching, and release discipline on the client side, always aligned with stable server contracts and observability.";
+  "Cross-platform delivery experience (Kotlin/Android) supports API integration work — iOS remains my primary engineering focus.";
 
 export type LiveWebShowcase = {
   name: string;
@@ -128,28 +121,16 @@ export type LiveWebShowcase = {
   description: string;
 };
 
-/** Live backend / API / frontend products */
 export const liveWebShowcases: LiveWebShowcase[] = [
-  {
-    name: "Views Bank",
-    url: "https://viewsbank.app/",
-    description:
-      "Rewards platform: users earn points from video engagement and redeem with partners — apps, APIs, and marketing site.",
-  },
-  {
-    name: "Leaders Translation",
-    url: "https://leaderstranslation.com/",
-    description: "Translation services: public web presence and client-facing flows.",
-  },
   {
     name: "Forsa Syria",
     url: "https://forsa.sy/",
-    description: "Jobs & recruitment platform for Syria — web product aligned with the Forsa mobile apps.",
+    description: "Jobs & recruitment platform — web product aligned with Forsa mobile apps.",
   },
   {
-    name: "Outmartt",
-    url: "https://outmartt.com/",
-    description: "Commercial web product — brand, catalog, and customer journeys.",
+    name: "Views Bank",
+    url: "https://viewsbank.app/",
+    description: "Rewards platform with mobile apps, APIs, and partner integrations.",
   },
 ];
 
@@ -159,67 +140,113 @@ const Profile = () => {
   return (
     <Engineer
       name="Sameh Bakleh"
-      role="Software Engineer · Backend & Mobile"
-      stack="Laravel · Symfony · Kotlin · Swift · Flutter · REST · Docker"
+      role="Senior iOS / Mobile Engineer"
+      stack="Swift · SwiftUI · REST · MVVM · Laravel · PHP"
     />
   );
 };`;
 
 export const stats = [
-  { label: "EXPERIENCE", value: "7+ YRS" },
-  { label: "FOCUS", value: "API · MOBILE" },
-  { label: "TARGET_ROLES", value: "8" },
+  { label: "EXPERIENCE", value: "8+ YRS" },
+  { label: "FOCUS", value: "iOS · MOBILE" },
+  { label: "PUBLIC_REPOS", value: "8" },
   { label: "STATUS", value: "OPEN TO WORK" },
 ];
 
-/** Skills — backend first, then delivery, then client integration */
 export const skills = [
   {
-    category: "Backend & APIs",
+    category: "iOS Engineering",
     items: [
-      "Laravel",
-      "Symfony",
-      "PHP",
-      "RESTful APIs",
-      "API Design",
+      "Swift",
+      "SwiftUI",
+      "UIKit",
+      "Combine",
+      "async/await",
+      "Swift Concurrency",
+      "MVVM",
+      "Clean Architecture",
+      "Coordinator Pattern",
+      "XCTest",
+      "UI Testing",
+      "Fastlane",
+      "TestFlight",
+      "App Store Connect",
+      "Core Data",
+      "Keychain",
+      "APNs",
+      "MapKit",
+      "Core Location",
+      "Accessibility",
+      "Localization",
+    ],
+  },
+  {
+    category: "Mobile / API Product Engineering",
+    items: [
+      "REST APIs",
+      "GraphQL exposure",
       "OpenAPI / Swagger",
       "JWT / OAuth2",
+      "Offline-capable flows",
+      "Local caching",
+      "Weak-network handling",
+      "Pagination",
+      "Push notifications",
+      "Crash triage",
+      "Performance optimization",
+      "Firebase Crashlytics",
+    ],
+  },
+  {
+    category: "Backend / API Engineering",
+    items: [
+      "PHP 8.x",
+      "Laravel",
+      "Symfony",
+      "API Platform",
+      "REST APIs",
+      "API Resources",
+      "DTOs",
+      "RBAC",
+      "Policies / Gates",
+      "Middleware",
       "MySQL",
       "PostgreSQL",
       "Redis",
-      "Node.js",
-      "Message queues (basics)",
-    ],
-  },
-  {
-    category: "Engineering & Delivery",
-    items: [
+      "Queues / Jobs",
+      "Events / Listeners",
       "Docker",
-      "GitLab CI/CD",
-      "Git",
-      "Agile / Scrum",
-      "SOLID Principles",
-      "Clean Architecture",
-      "Clean Code",
-      "Code Review",
-      "Automated Testing",
-      "Scalable Architecture",
-      "Microservices (basics)",
+      "OpenAPI / Swagger",
+      "PHPUnit",
+      "Pest",
     ],
   },
   {
-    category: "Mobile & client apps",
+    category: "Testing & Delivery",
     items: [
-      "Kotlin / Android",
-      "Jetpack",
-      "MVVM",
-      "Clean Architecture (mobile)",
-      "Swift / iOS",
-      "Flutter",
-      "Bloc",
-      "REST client integration",
-      "Next.js",
+      "XCTest",
+      "PHPUnit",
+      "Pest",
+      "GitHub Actions",
+      "GitLab CI/CD",
+      "Docker Compose",
       "Fastlane",
+      "CI/CD pipelines",
+      "TestFlight",
+      "App Store release support",
+      "API documentation",
+    ],
+  },
+  {
+    category: "Collaboration",
+    items: [
+      "Agile / Scrum",
+      "Code reviews",
+      "Remote teamwork",
+      "Product / design collaboration",
+      "QA collaboration",
+      "API contract alignment",
+      "Release coordination",
     ],
   },
 ];
@@ -227,357 +254,269 @@ export const skills = [
 export type ExperienceItem = {
   id: string;
   period: string;
-  location: string;
   company: string;
   title: string;
-  bullets: string[];
+  summary: string;
   stack: string[];
 };
 
-/** Non-overlapping timeline — newest first */
+/** Master timeline — matches LinkedIn and CVs */
 export const experience: ExperienceItem[] = [
   {
     id: "brainycode-tech",
-    period: "January 2025 - February 2026 (1 year 2 months)",
-    location: "Beirut Governorate, Lebanon",
+    period: "Jan 2025 – Present",
     company: "BrainyCode Tech",
-    title: "Senior Backend & Mobile Team Lead",
-    bullets: [
-      "Led the architecture and delivery of scalable mobile and backend systems across multiple production projects.",
-      "Designed and built mobile applications using Kotlin (Jetpack, MVVM), Swift (iOS), and Flutter",
-      "Developed backend systems using Laravel and Symfony with RESTful APIs",
-      "Defined API standards (JWT, OAuth2, versioning, validation layers)",
-      "Improved system performance using Redis caching, reducing database load",
-      "Established CI/CD pipelines using GitLab CI/CD, Docker, and Fastlane",
-      "Led Agile/Scrum processes and managed a cross-functional engineering team",
-      "Introduced code review practices and automated testing strategies",
-      "Managed full product lifecycle from requirements to deployment",
-    ],
-    stack: [
-      "Kotlin",
-      "Jetpack",
-      "MVVM",
-      "Swift (iOS)",
-      "Flutter",
-      "Laravel",
-      "Symfony",
-      "RESTful APIs",
-      "JWT",
-      "OAuth2",
-      "API versioning",
-      "Validation layers",
-      "Redis caching",
-      "GitLab CI/CD",
-      "Docker",
-      "Fastlane",
-      "Agile/Scrum",
-      "Cross-functional leadership",
-      "Automated testing",
-    ],
-  },
-  {
-    id: "anorizontech",
-    period: "September 2023 - December 2024 (1 year 4 months)",
-    location: "Damascus Governorate, Syria",
-    company: "AnorizonTech",
-    title: "Senior Backend Engineer",
-    bullets: [
-      "Designed and developed secure, scalable backend systems, optimizing performance and ensuring maintainable architectures.",
-      "Developed Laravel-based systems with Role-Based Access Control (RBAC) for secure and scalable architectures",
-      "Refactored complex database queries, eliminating N+1 issues to improve admin dashboard performance",
-      "Built secure and efficient RESTful APIs with API versioning and input validation",
-    ],
-    stack: [
-      "Laravel",
-      "RBAC",
-      "N+1 elimination",
-      "Admin dashboard performance",
-      "RESTful APIs",
-      "API versioning",
-      "Input validation",
-      "Database optimization",
-    ],
+    title: "Senior Software Engineer — Mobile & Backend",
+    summary:
+      "Hands-on delivery of Swift iOS, Kotlin/Android, and Laravel/Symfony APIs — feature work, integration, CI/CD, and production releases across mobile and backend.",
+    stack: ["Swift", "iOS", "Kotlin", "Laravel", "Symfony", "REST APIs", "Redis", "Docker", "Fastlane"],
   },
   {
     id: "forsa-sy",
-    period: "January 2024 - August 2024 (8 months)",
-    location: "Damascus Governorate, Syria",
+    period: "Jan 2024 – Dec 2024",
     company: "Forsa.sy",
-    title: "Senior Backend Engineer",
-    bullets: [
-      "Developed and optimized backend systems for a high-traffic recruitment platform, focusing on performance, scalability, and code quality.",
-      "Built and optimized REST APIs, integrating Redis for caching to improve performance",
-      "Reduced response times and server load by restructuring validation and request-handling workflows",
-      "Mentored junior developers and standardized backend code structures across the team",
-    ],
-    stack: [
-      "REST APIs",
-      "Redis",
-      "Validation",
-      "Request-handling workflows",
-      "Performance",
-      "Scalability",
-      "Code quality",
-      "Mentoring",
-    ],
+    title: "Software Engineer — Mobile & Backend Platform",
+    summary:
+      "Built recruitment platform features on mobile and Laravel APIs — listings, applications, caching, and performance-focused backend workflows.",
+    stack: ["Swift", "iOS", "Laravel", "REST APIs", "Redis", "MySQL"],
+  },
+  {
+    id: "anorizontech",
+    period: "Jan 2023 – Dec 2023",
+    company: "AnorizonTech",
+    title: "Backend Engineer — Laravel / PHP",
+    summary:
+      "Developed Laravel REST APIs with RBAC, validation, and database optimization for admin and client-facing platform features.",
+    stack: ["Laravel", "PHP", "RBAC", "REST APIs", "MySQL", "Redis"],
   },
   {
     id: "cloud-systems-sarl",
-    period: "May 2022 - December 2023 (1 year 8 months)",
-    location: "Beirut Governorate, Lebanon",
+    period: "Jun 2020 – Dec 2022",
     company: "Cloud Systems SARL",
-    title: "Senior Mobile Team Lead",
-    bullets: [
-      "Led iOS development and managed a team delivering high-performance mobile applications.",
-      "Developed scalable iOS applications using Swift",
-      "Led and mentored a team of mobile developers",
-      "Participated in architecture, planning, and App Store delivery",
-      "Improved code quality and maintainability using best practices",
-      "Aligned development with business goals using Agile methodologies",
-    ],
-    stack: ["Swift", "iOS", "App Store delivery", "Agile methodologies", "Team leadership", "Architecture & planning"],
-  },
-  {
-    id: "arcadous",
-    period: "May 2021 - April 2022 (1 year)",
-    location: "Beirut Governorate, Lebanon",
-    company: "Arcadous",
-    title: "Full Stack Engineer",
-    bullets: [
-      "Built scalable web applications and backend services across the full stack.",
-      "Developed backend systems using Laravel and Symfony",
-      "Built REST APIs with JWT and OAuth2 authentication",
-      "Developed frontend applications using Next.js",
-      "Optimized databases (MySQL, PostgreSQL) for performance",
-      "Implemented Redis caching for scalability",
-      "Used Docker and CI/CD pipelines for deployment automation",
-    ],
-    stack: [
-      "Laravel",
-      "Symfony",
-      "JWT",
-      "OAuth2",
-      "Next.js",
-      "MySQL",
-      "PostgreSQL",
-      "Redis caching",
-      "Docker",
-      "CI/CD",
-    ],
+    title: "Senior Mobile Engineer / Mobile Team Lead",
+    summary:
+      "Shipped Swift iOS features end-to-end while coordinating mobile delivery, architecture, code quality, and App Store releases.",
+    stack: ["Swift", "iOS", "SwiftUI", "UIKit", "MVVM", "App Store", "REST APIs"],
   },
   {
     id: "magma-global",
-    period: "February 2019 - March 2021 (2 years 2 months)",
-    location: "Beirut Governorate, Lebanon",
+    period: "Feb 2019 – May 2020",
     company: "Magma Global",
     title: "Mobile Application Developer",
-    bullets: [
-      "Developed native mobile applications for Android and iOS platforms.",
-      "Built Android apps using Kotlin and Java",
-      "Developed iOS apps using Swift",
-      "Reduced crash rates by ~50% through code refactoring",
-      "Implemented secure authentication (JWT, OAuth2)",
-      "Improved performance and application stability",
-    ],
-    stack: ["Kotlin", "Java", "Swift", "Android", "iOS", "JWT", "OAuth2", "Performance", "Stability"],
+    summary:
+      "Built native iOS and Android apps with Swift and Kotlin — API integration, authentication, stability improvements, and crash reduction.",
+    stack: ["Swift", "Kotlin", "iOS", "Android", "REST APIs", "JWT"],
   },
   {
     id: "creapix",
-    period: "September 2018 - January 2019 (5 months)",
-    location: "Beirut Governorate, Lebanon",
-    company: "Creapix",
+    period: "Mar 2018 – Feb 2019",
+    company: "CreaPix",
     title: "Full-Stack Developer",
-    bullets: [
-      "Developed innovative and efficient software solutions for clients, delivering high-quality applications across the full technology stack.",
-      "Developed applications using PHP, Laravel, and JavaScript",
-      "Collaborated with cross-functional teams to meet client requirements and deadlines",
-      "Provided technical guidance and mentored junior developers",
-      "Researched and implemented new technologies to improve development processes",
-      "Designed and optimized database schemas and queries for performance and scalability",
-      "Ensured application security and performance through rigorous testing and monitoring",
-    ],
-    stack: ["PHP", "Laravel", "JavaScript", "Database schemas", "Performance", "Scalability", "Security", "Testing", "Monitoring"],
+    summary:
+      "Delivered PHP/Laravel applications with optimized database schemas and secure, maintainable backend features.",
+    stack: ["PHP", "Laravel", "MySQL", "JavaScript"],
   },
   {
     id: "dreamwd",
-    period: "February 2016 - June 2018 (2 years 5 months)",
-    location: "Doha, Qatar",
+    period: "Feb 2016 – Feb 2018",
     company: "DreamWD",
     title: "Mobile Application Developer",
-    bullets: [
-      "Developed and implemented mobile application strategies for both iOS and Android platforms, focusing on performance, usability, and maintainable architecture.",
-      "Developed mobile applications using Swift (iOS) and Kotlin / Java (Android)",
-      "Collaborated closely with the design team to create intuitive and user-friendly interfaces",
-      "Took ownership of the mobile codebase, ensuring clean, maintainable, and high-quality implementations",
-      "Led and mentored a team of junior mobile developers",
-      "Integrated various APIs and third-party services into mobile applications",
-      "Conducted usability testing and incorporated feedback to continuously improve the user experience",
-    ],
-    stack: ["Swift", "Kotlin / Java", "Android", "iOS", "Usability testing", "API integration", "Third-party services", "Team leadership"],
+    summary:
+      "Developed Swift iOS and Kotlin/Android apps — API integration, UI implementation, and maintainable mobile architecture.",
+    stack: ["Swift", "Kotlin", "iOS", "Android", "REST APIs"],
   },
 ];
 
 export type ProjectItem = {
   name: string;
-  /** Workspace folder in the portfolio monorepo */
   folder: string;
   description: string;
   stack: string[];
   highlight: string;
-  demo?: string;
-  repo?: string;
+  repo: string;
+  badge?: string;
+  category: "ios" | "backend";
+  proves: string[];
 };
 
-/** Every app in `new repo` (excluding archives of tooling-only zips) */
-export const projects: ProjectItem[] = [
+export const iosProjects: ProjectItem[] = [
   {
-    name: "Marketplace Platform",
-    folder: "marketplace-platform/",
+    name: "iOS Marketplace Product App",
+    folder: "ios-marketplace-product-app/",
     description:
-      "Production monorepo: Laravel 13 REST API (JWT, RBAC, Swagger), Next.js 16 storefront & seller dashboard, Docker (PHP-FPM, Nginx, MySQL, Redis).",
-    stack: ["Laravel", "Next.js", "TypeScript", "Tailwind", "Docker", "MySQL", "Redis"],
-    highlight: "Laravel",
-    repo: site.github,
+      "Production-style iOS marketplace client demonstrating product listing flows, authentication, favorites, pagination, API integration, local state handling, and clean mobile architecture.",
+    stack: ["Swift", "SwiftUI", "MVVM", "REST APIs", "Authentication", "Keychain", "Pagination", "Local Cache"],
+    highlight: "iOS / Mobile",
+    repo: "https://github.com/samhbk/ios-marketplace-product-app",
+    badge: "Portfolio sample",
+    category: "ios",
+    proves: [
+      "API-backed iOS product flows",
+      "Clean mobile architecture",
+      "Authentication and token handling",
+      "Listing / detail / favorites UX",
+      "Error, loading, and empty states",
+    ],
   },
   {
-    name: "Marketplace Platform API",
-    folder: "marketplace-platform-api/",
+    name: "iOS Real-Time Offline Chat",
+    folder: "ios-realtime-offline-chat/",
     description:
-      "Symfony 7 marketplace API: JWT + refresh, MySQL, Redis (cache + Messenger), Nelmio OpenAPI, Docker. Roles: Admin, Seller, Customer.",
-    stack: ["Symfony", "PHP", "MySQL", "Redis", "Docker", "OpenAPI"],
-    highlight: "Symfony",
-    repo: site.github,
+      "Real-time iOS chat client focused on message states, local persistence, offline-aware UX, attachment handling, retry behaviour, and testable mobile state management.",
+    stack: ["Swift", "UIKit", "Local Persistence", "Message States", "Offline UX", "Retry Logic"],
+    highlight: "iOS / Mobile",
+    repo: "https://github.com/samhbk/ios-realtime-offline-chat",
+    badge: "Portfolio sample",
+    category: "ios",
+    proves: [
+      "Real-time mobile UX",
+      "Offline-capable state handling",
+      "Message lifecycle management",
+      "Local storage and retry flows",
+      "Production-style chat behaviour",
+    ],
   },
+];
+
+export const backendProjects: ProjectItem[] = [
   {
-    name: "Marketplace API (Laravel copy)",
-    folder: "marketplace-platform-api-laravel-copy/",
-    description: "Laravel API workspace variant — reference / parallel implementation alongside the Symfony service.",
-    stack: ["Laravel", "PHP", "REST"],
-    highlight: "Laravel",
-    repo: site.github,
-  },
-  {
-    name: "Marketplace API (Laravel archive)",
-    folder: "marketplace-platform-api-laravel-archive/",
-    description: "Archived Laravel API snapshot for the marketplace domain (history / comparison).",
-    stack: ["Laravel", "PHP"],
-    highlight: "Laravel",
-    repo: site.github,
-  },
-  {
-    name: "Marketplace (iOS)",
-    folder: "MarketplaceApp/",
+    name: "Laravel Recruitment Platform API",
+    folder: "laravel-recruitment-platform-api/",
     description:
-      "SwiftUI marketplace client: MVVM, Combine, Alamofire; bearer auth and paginated resources against a Laravel-style JSON API.",
-    stack: ["Swift", "SwiftUI", "Combine", "iOS"],
-    highlight: "Swift",
-    repo: site.github,
-  },
-  {
-    name: "Android Marketplace",
-    folder: "android-marketplace/",
-    description: "Native Android marketplace app (Kotlin, Jetpack) aligned with marketplace platform APIs.",
-    stack: ["Kotlin", "Jetpack", "Gradle", "REST"],
-    highlight: "Kotlin",
-    repo: site.github,
+      "Laravel recruitment platform API covering job listings, candidate applications, employer workflows, authentication, RBAC, validation, caching, and API documentation.",
+    stack: ["Laravel", "PHP", "REST APIs", "RBAC", "MySQL", "Redis", "OpenAPI", "Docker"],
+    highlight: "Backend / API",
+    repo: "https://github.com/samhbk/laravel-recruitment-platform-api",
+    badge: "Portfolio sample",
+    category: "backend",
+    proves: [
+      "Backend platform workflows",
+      "Auth and role-based access",
+      "API resources and validation",
+      "Caching and database-backed features",
+      "Mobile-ready API contracts",
+    ],
   },
   {
     name: "Booking System API",
-    folder: "booking-system-api/",
+    folder: "booking-system-api-showcase/",
     description:
-      "Laravel REST API: JWT, bookable resources, availability & overlap-safe bookings, Redis caching, queues, API versioning, Swagger.",
-    stack: ["Laravel", "PHP", "MySQL", "Redis", "REST"],
-    highlight: "Laravel",
-    repo: site.github,
+      "Laravel booking API demonstrating reservation workflows, availability checks, validation, API versioning, caching, and testable backend logic.",
+    stack: ["Laravel", "PHP", "JWT / Sanctum", "Redis", "Swagger", "Docker"],
+    highlight: "Backend / API",
+    repo: "https://github.com/samhbk/booking-system-api-showcase",
+    badge: "Portfolio sample",
+    category: "backend",
+    proves: [
+      "Booking workflow logic",
+      "Availability and validation flows",
+      "API versioning",
+      "Backend testing and documentation",
+    ],
   },
   {
-    name: "Recruitment Platform",
-    folder: "recruitment-platform-laravel/",
+    name: "Laravel ERP / E-Commerce Integration API",
+    folder: "laravel-ecommerce-erp-integration-api/",
     description:
-      "Scalable job portal: JWT, listings, applicant tracking, salary analytics, Redis, clean architecture.",
-    stack: ["Laravel", "MySQL", "Redis", "JWT", "PHP"],
-    highlight: "Laravel",
-    repo: site.github,
+      "Laravel integration API for e-commerce and ERP workflows, using webhooks, queues, retry logic, HMAC signing, audit logging, and Docker-based setup.",
+    stack: ["Laravel", "Queues", "Webhooks", "HMAC", "Redis", "Docker", "PHPUnit"],
+    highlight: "Backend / API",
+    repo: "https://github.com/samhbk/laravel-ecommerce-erp-integration-api",
+    badge: "Portfolio sample",
+    category: "backend",
+    proves: [
+      "Integration engineering",
+      "Async jobs and retry workflows",
+      "Webhook security",
+      "Product / stock / order sync patterns",
+      "Backend reliability mindset",
+    ],
+  },
+];
+
+export type GitHubProofRepo = {
+  name: string;
+  proof: string;
+  repo: string;
+};
+
+export type GitHubProofGroup = {
+  label: string;
+  repos: GitHubProofRepo[];
+};
+
+export const githubProofGroups: GitHubProofGroup[] = [
+  {
+    label: "iOS proof",
+    repos: [
+      {
+        name: "ios-marketplace-product-app",
+        proof: "API-backed SwiftUI marketplace client with auth, pagination, and MVVM architecture.",
+        repo: "https://github.com/samhbk/ios-marketplace-product-app",
+      },
+      {
+        name: "ios-realtime-offline-chat",
+        proof: "UIKit chat client with message states, offline UX, persistence, and retry logic.",
+        repo: "https://github.com/samhbk/ios-realtime-offline-chat",
+      },
+    ],
   },
   {
-    name: "E-Commerce Platform",
-    folder: "ecommerce-platform/",
-    description:
-      "Full-stack commerce: Node/Express + Next.js, MongoDB, JWT/RBAC, Stripe checkout, Docker, GitHub Actions CI.",
-    stack: ["Node.js", "Next.js", "MongoDB", "Stripe", "Docker"],
-    highlight: "Next.js",
-    repo: site.github,
+    label: "Backend / API proof",
+    repos: [
+      {
+        name: "laravel-recruitment-platform-api",
+        proof: "Laravel recruitment API with RBAC, listings, applications, and OpenAPI.",
+        repo: "https://github.com/samhbk/laravel-recruitment-platform-api",
+      },
+      {
+        name: "booking-system-api-showcase",
+        proof: "Laravel booking workflows with availability checks and API versioning.",
+        repo: "https://github.com/samhbk/booking-system-api-showcase",
+      },
+      {
+        name: "laravel-ecommerce-erp-integration-api",
+        proof: "ERP integration with webhooks, queues, HMAC signing, and audit logging.",
+        repo: "https://github.com/samhbk/laravel-ecommerce-erp-integration-api",
+      },
+    ],
   },
   {
-    name: "Real-Time Chat Application",
-    folder: "chat-app/",
-    description: "Private & group chat, message history, WebSockets, Node/Express backend, React frontend.",
-    stack: ["Node.js", "Express", "Socket.io", "MongoDB", "React"],
-    highlight: "Node.js",
-    repo: site.github,
-  },
-  {
-    name: "iOS Chat App",
-    folder: "ios-chat-app/",
-    description:
-      "Native iOS realtime chat: Swift/SwiftUI patterns, Firebase Auth, Firestore or RTDB, FCM, media & delivery states.",
-    stack: ["Swift", "SwiftUI", "Firebase", "iOS"],
-    highlight: "Swift",
-    repo: site.github,
-  },
-  {
-    name: "Analytics Dashboard",
-    folder: "nextjs-dashboard/",
-    description: "Next.js dashboard with KPIs, charts, activity tables — admin-style analytics UI.",
-    stack: ["Next.js", "TypeScript", "Tailwind", "Recharts"],
-    highlight: "Next.js",
-    repo: site.github,
-  },
-  {
-    name: "Task Management System",
-    folder: "task-management-system/",
-    description:
-      "Spring Boot + React/TS: JWT, RBAC, tasks CRUD, calendar view, Docker Compose, GitHub Actions.",
-    stack: ["Spring Boot", "Java", "React", "TypeScript", "PostgreSQL", "Docker"],
-    highlight: "Spring",
-    repo: site.github,
-  },
-  {
-    name: "Personal Finance Tracker",
-    folder: "personal-finance-tracker/",
-    description: "Income/expense tracking, budgets, categories, reports & charts; Node/Express, React, MongoDB, Docker CI.",
-    stack: ["Node.js", "Express", "MongoDB", "React", "Tailwind", "Docker"],
-    highlight: "React",
-    repo: site.github,
-  },
-  {
-    name: "Developer Portfolio (this site)",
-    folder: "sameh-portfolio/",
-    description:
-      "Terminal-inspired portfolio: Next.js App Router, TypeScript, Tailwind, Framer Motion — your public profile.",
-    stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    highlight: "Next.js",
-    repo: site.github,
+    label: "Supporting",
+    repos: [
+      {
+        name: "android-marketplace-client",
+        proof: "Kotlin marketplace client — cross-platform API integration reference.",
+        repo: "https://github.com/samhbk/android-marketplace-client",
+      },
+      {
+        name: "portfolio",
+        proof: "This portfolio site — Next.js, TypeScript, Tailwind.",
+        repo: "https://github.com/samhbk/portfolio",
+      },
+    ],
   },
 ];
 
 export const navItems = [
   { id: "home", label: "Home", file: "main.ts" },
   { id: "about", label: "About", file: "about.md" },
+  { id: "ios-work", label: "iOS", file: "ios/" },
+  { id: "backend-apis", label: "APIs", file: "backend/" },
   { id: "skills", label: "Skills", file: "skills.json" },
   { id: "experience", label: "Experience", file: "experience.git" },
-  { id: "projects", label: "Projects", file: "projects/" },
-  { id: "showcase", label: "Showcase", file: "live/refs" },
-  { id: "stats", label: "Stats", file: "metrics.db" },
+  { id: "github-proof", label: "GitHub", file: "proof/" },
+  { id: "shipped", label: "Shipped", file: "live/refs" },
   { id: "contact", label: "Contact", file: "contact.sh" },
 ] as const;
 
 export const loadedModules = [
-  "LARAVEL",
-  "SYMFONY",
-  "REST",
-  "KOTLIN",
   "SWIFT",
-  "FLUTTER",
+  "SWIFTUI",
+  "UIKit",
+  "MVVM",
+  "REST",
+  "LARAVEL",
+  "PHP",
   "DOCKER",
 ];
