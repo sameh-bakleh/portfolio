@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   keywords: [
     "Sameh Bakleh",
-    "Senior iOS Engineer Germany",
+    "Senior Software Engineer Germany",
     "iOS Developer Germany",
     "Mobile Engineer Germany",
     "Swift Developer Germany",
@@ -60,7 +60,7 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: site.name,
-  jobTitle: "Senior iOS / Mobile Engineer",
+  jobTitle: "Senior Software Engineer · iOS & PHP Backend",
   email: site.email,
   url: canonicalUrl,
   address: {

@@ -16,7 +16,7 @@ export function ExperienceSection() {
       <div className="mx-auto max-w-6xl">
         <SectionTitle
           step="05"
-          kicker="Concise timeline aligned with LinkedIn and CVs — hands-on mobile and backend delivery."
+          kicker="Concise timeline aligned with LinkedIn — senior iOS + PHP/Laravel backend delivery."
         >
           $ git log --oneline
         </SectionTitle>

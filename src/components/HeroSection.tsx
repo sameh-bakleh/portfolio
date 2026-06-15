@@ -10,6 +10,7 @@ import {
   heroSubtitle,
   loadedModules,
   proofBadges,
+  roleSubtitle,
   site,
 } from "@/lib/site";
 import { heroItem, heroStagger, springLift } from "@/lib/motion";
@@ -95,10 +96,16 @@ export function HeroSection() {
               </motion.h1>
               <motion.h2
                 variants={itemVariants}
-                className="mb-5 max-w-[52rem] text-lg font-semibold leading-snug text-on-surface sm:text-xl md:text-2xl md:leading-tight"
+                className="mb-3 max-w-[52rem] text-lg font-semibold capitalize leading-snug text-on-surface sm:text-xl md:text-2xl md:leading-tight"
+              >
+                {roleSubtitle}
+              </motion.h2>
+              <motion.p
+                variants={itemVariants}
+                className="mb-5 max-w-[52rem] font-mono text-xs leading-relaxed text-primary/90 sm:text-sm"
               >
                 {headline}
-              </motion.h2>
+              </motion.p>
 
               <motion.p
                 variants={itemVariants}

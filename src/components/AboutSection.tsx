@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { aboutParagraphs, education, languages, site, stats } from "@/lib/site";
+import { aboutParagraphs, education, languages, site, stats, topSkills } from "@/lib/site";
 import { springLift, staggerContainer, staggerItem } from "@/lib/motion";
 import { SectionTitle } from "./SectionTitle";
 import { TerminalWindow } from "./TerminalWindow";
@@ -16,7 +16,7 @@ export function AboutSection() {
       <div className="mx-auto max-w-6xl">
         <SectionTitle
           step="01"
-          kicker="Hands-on Senior iOS / Mobile Engineer with backend API depth — based in Bochum, Germany."
+          kicker="Senior Software Engineer · 5+ years iOS/Swift · 5+ years PHP/Laravel APIs — aligned with LinkedIn."
         >
           ## About<span className="text-on-surface-variant">.system</span>
         </SectionTitle>
@@ -71,6 +71,19 @@ export function AboutSection() {
                         >
                           {p}
                         </motion.p>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <p className="mb-2 text-primary/85">➜ cat top_skills.json</p>
+                    <div className="flex flex-wrap gap-2">
+                      {topSkills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="rounded-full border border-primary/35 bg-primary/[0.08] px-2.5 py-1 text-[10px] text-primary"
+                        >
+                          {skill}
+                        </span>
                       ))}
                     </div>
                   </div>

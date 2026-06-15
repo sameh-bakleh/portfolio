@@ -1,26 +1,27 @@
 /** Site content — edit social URLs here before deploy */
 
-export const headline = "Senior iOS / Mobile Engineer with Backend API Depth";
+export const headline =
+  "Senior Software Engineer | iOS & PHP Backend | Swift · SwiftUI · UIKit · Laravel · Symfony · REST APIs | Germany";
 
 export const heroSubtitle =
-  "I build production iOS applications with Swift, SwiftUI, UIKit, MVVM, Clean Architecture, REST APIs, offline-capable flows, testing, and App Store delivery — backed by strong PHP, Laravel, Symfony, Redis, Docker, and API contract experience.";
+  "Hands-on Senior Software Engineer in Bochum with 5+ years in iOS/Swift mobile engineering and 5+ years in PHP/Laravel API and admin systems — production apps, backend platforms, API contracts, and release-ready delivery across Germany and Europe.";
 
 export const availabilityLine =
-  "Based in Bochum, Germany. Open to English-speaking iOS, Mobile, PHP Backend, Laravel, Symfony, and API Engineering roles across Germany and Europe.";
+  "Based in Bochum, Germany. Open to English-speaking iOS Developer, Senior iOS Engineer, Mobile Engineer, PHP Developer, Laravel Developer, Symfony Developer, Backend Developer, Backend Engineer, and Software Engineer roles across Germany and Europe.";
 
-export const metaTitle = "Senior iOS Engineer & Backend API Developer in Germany";
+export const metaTitle = "Senior Software Engineer · APIs, Mobile & Platforms | Germany";
 
 export const metaDescription =
-  "Senior iOS / Mobile Engineer based in Bochum, Germany. Swift, SwiftUI, UIKit, MVVM, REST APIs, offline-capable mobile flows, testing, App Store delivery, plus Laravel/Symfony backend API experience.";
+  "Senior Software Engineer in Bochum, Germany. 5+ years iOS/Swift, 5+ years PHP/Laravel APIs & admin systems. Swift, SwiftUI, UIKit, Laravel, Symfony, REST APIs, mobile and backend delivery.";
 
-export const roleSubtitle = "Senior iOS / Mobile Engineer · Backend API Depth";
+export const roleSubtitle = "Senior software engineer · APIs, mobile & platforms · Germany";
 
-export const socialCardTitle = "Senior iOS / Mobile Engineer";
+export const socialCardTitle = "Senior Software Engineer · iOS & PHP Backend";
 
 export const proofBadges = [
-  "8+ Years Software Engineering",
-  "iOS-first Mobile Engineering",
-  "Laravel / Symfony APIs",
+  "5+ Years iOS · Swift",
+  "5+ Years PHP · Laravel APIs",
+  "Senior iOS + Backend Engineer",
   "Based in Germany",
   "English B2 · German A2 improving",
 ] as const;
@@ -43,7 +44,7 @@ export const site = {
   availabilityDetail:
     "Flexible start date — remote, hybrid, and on-site across Germany and the EU.",
   workMode: "Remote · Hybrid · On-site (Germany & EU)",
-  operatorRole: "SENIOR_IOS_MOBILE_ENG",
+  operatorRole: "SENIOR_SW_ENGINEER",
 } as const;
 
 export function githubProfileHref(): string | null {
@@ -53,35 +54,35 @@ export function githubProfileHref(): string | null {
 }
 
 export const aboutParagraphs = [
-  "I am a hands-on Senior Software Engineer based in Bochum, Germany, with 8+ years of experience across iOS/mobile applications and backend/API systems.",
-  "My primary focus is iOS / Mobile Engineering — app features, API-backed flows, offline-capable behaviour, clean architecture, testing, performance work, and release-ready mobile delivery.",
-  "My secondary strength is PHP Backend / API Engineering with Laravel, Symfony, REST APIs, authentication, RBAC, Redis, Docker, OpenAPI, and database workflows.",
-  "I work best close to the code: building features, debugging complex issues, integrating APIs, improving architecture, reviewing code, and shipping maintainable software for real users.",
-  `${productDomains} Public portfolio repositories demonstrate engineering approach; store listings reflect shipped product work.`,
+  "I am a hands-on Senior Software Engineer based in Bochum, Germany, with 8+ years of professional experience across mobile applications and backend/API systems.",
+  "My strongest technical focus is split between two areas: iOS / Mobile Engineering (5+ years) — Swift, UIKit, SwiftUI, Combine, async/await, REST/GraphQL APIs, authentication, push notifications, maps, real-time features, offline-capable behaviour, caching, performance, crash triage, testing, Fastlane, TestFlight, and App Store delivery.",
+  "PHP Backend / API Engineering (5+ years) — PHP, Laravel, Symfony, REST APIs, API Platform, MySQL/PostgreSQL, Redis, RBAC, JWT/OAuth2, admin dashboards, SQL optimization, Docker, CI/CD, OpenAPI/Swagger, and mobile-ready API contracts.",
+  "I enjoy working close to the code: building features, fixing complex production issues, improving app stability, refactoring legacy code, optimizing backend performance, reviewing code, and collaborating with product, design, QA, mobile, and backend teams.",
+  "My mobile and backend experience gives me a practical advantage: I understand both sides of API-driven products — from backend contracts and database performance to real mobile behaviour under weak networks, validation errors, authentication states, and release-critical edge cases.",
 ] as const;
 
 export const education =
-  "B.Sc. Software Engineering — Yarmouk Private University (2010–2016) · GPA 3.2/4.0";
+  "B.Sc. Computer Software Engineering — Yarmouk Private University (2010–2016)";
 
 export const languages = [
-  "Arabic — Native",
-  "English — B2 (professional working proficiency)",
-  "German — A2 (elementary, actively improving)",
+  "Arabic — Native or bilingual",
+  "English — Professional working proficiency",
+  "German — Elementary (actively improving)",
 ] as const;
 
 export const openToRoles = [
-  "Senior iOS Engineer",
   "iOS Developer",
-  "iOS Engineer",
-  "Swift Developer",
+  "Senior iOS Engineer",
   "Mobile Engineer",
-  "Backend Engineer",
-  "API Engineer",
   "PHP Developer",
   "Laravel Developer",
   "Symfony Developer",
+  "Backend Developer",
+  "Backend Engineer",
   "Software Engineer",
 ] as const;
+
+export const topSkills = ["iOS Development", "Android Development", "Laravel"] as const;
 
 export type PublishedApp = { name: string; url: string; note?: string };
 
@@ -140,16 +141,16 @@ const Profile = () => {
   return (
     <Engineer
       name="Sameh Bakleh"
-      role="Senior iOS / Mobile Engineer"
-      stack="Swift · SwiftUI · REST · MVVM · Laravel · PHP"
+      role="Senior Software Engineer · iOS & PHP Backend"
+      stack="Swift · SwiftUI · UIKit · Laravel · PHP · REST APIs"
     />
   );
 };`;
 
 export const stats = [
+  { label: "iOS · SWIFT", value: "5+ YRS" },
+  { label: "PHP · LARAVEL", value: "5+ YRS" },
   { label: "EXPERIENCE", value: "8+ YRS" },
-  { label: "FOCUS", value: "iOS · MOBILE" },
-  { label: "PUBLIC_REPOS", value: "8" },
   { label: "STATUS", value: "OPEN TO WORK" },
 ];
 
@@ -200,25 +201,24 @@ export const skills = [
   {
     category: "Backend / API Engineering",
     items: [
-      "PHP 8.x",
+      "PHP",
       "Laravel",
       "Symfony",
       "API Platform",
       "REST APIs",
-      "API Resources",
-      "DTOs",
+      "Admin dashboards",
       "RBAC",
       "Policies / Gates",
-      "Middleware",
+      "JWT / OAuth2",
       "MySQL",
       "PostgreSQL",
       "Redis",
+      "SQL optimization",
       "Queues / Jobs",
-      "Events / Listeners",
       "Docker",
       "OpenAPI / Swagger",
       "PHPUnit",
-      "Pest",
+      "CI/CD",
     ],
   },
   {
@@ -260,70 +260,70 @@ export type ExperienceItem = {
   stack: string[];
 };
 
-/** Master timeline — matches LinkedIn and CVs */
+/** Master timeline — matches LinkedIn */
 export const experience: ExperienceItem[] = [
   {
     id: "brainycode-tech",
-    period: "Jan 2025 – Present",
+    period: "Jan 2025 – Present · Germany / Remote",
     company: "BrainyCode Tech",
     title: "Senior Software Engineer — Mobile & Backend",
     summary:
-      "Hands-on delivery of Swift iOS, Kotlin/Android, and Laravel/Symfony APIs — feature work, integration, CI/CD, and production releases across mobile and backend.",
-    stack: ["Swift", "iOS", "Kotlin", "Laravel", "Symfony", "REST APIs", "Redis", "Docker", "Fastlane"],
+      "Hands-on senior role combining iOS/Android/Flutter mobile features with PHP, Laravel, and Symfony APIs — authentication, listings, offline/retry flows, API contracts, Docker, GitLab CI/CD, Redis, Fastlane, and TestFlight.",
+    stack: ["Swift", "iOS", "Flutter", "Laravel", "Symfony", "REST APIs", "Redis", "Docker", "Fastlane"],
   },
   {
     id: "forsa-sy",
-    period: "Jan 2024 – Dec 2024",
+    period: "Jan 2024 – Dec 2024 · Remote / Syria",
     company: "Forsa.sy",
     title: "Software Engineer — Mobile & Backend Platform",
     summary:
-      "Built recruitment platform features on mobile and Laravel APIs — listings, applications, caching, and performance-focused backend workflows.",
-    stack: ["Swift", "iOS", "Laravel", "REST APIs", "Redis", "MySQL"],
+      "Recruitment platform: Laravel REST APIs, job listings, dashboards, reporting, RBAC, Redis caching, SQL optimization, and mobile-ready APIs supporting iOS and Android clients.",
+    stack: ["Laravel", "PHP", "REST APIs", "Redis", "MySQL", "RBAC", "Admin dashboards"],
   },
   {
     id: "anorizontech",
-    period: "Jan 2023 – Dec 2023",
+    period: "Jan 2023 – Dec 2023 · Remote / Middle East",
     company: "AnorizonTech",
     title: "Backend Engineer — Laravel / PHP",
     summary:
-      "Developed Laravel REST APIs with RBAC, validation, and database optimization for admin and client-facing platform features.",
-    stack: ["Laravel", "PHP", "RBAC", "REST APIs", "MySQL", "Redis"],
+      "Laravel backend modules, admin dashboards, REST integrations, RBAC, SQL/reporting performance, Redis, queues, and stable APIs for mobile and web clients.",
+    stack: ["Laravel", "PHP", "Admin dashboards", "RBAC", "REST APIs", "MySQL", "Redis"],
   },
   {
     id: "cloud-systems-sarl",
-    period: "Jun 2020 – Dec 2022",
+    period: "Jun 2020 – Dec 2022 · Remote / Beirut",
     company: "Cloud Systems SARL",
     title: "Senior Mobile Engineer / Mobile Team Lead",
     summary:
-      "Shipped Swift iOS features end-to-end while coordinating mobile delivery, architecture, code quality, and App Store releases.",
-    stack: ["Swift", "iOS", "SwiftUI", "UIKit", "MVVM", "App Store", "REST APIs"],
+      "Production iOS apps in Swift/UIKit/SwiftUI, Android features, API-backed flows, App Store and Play releases, stability improvements, code reviews, and hands-on team coordination.",
+    stack: ["Swift", "iOS", "UIKit", "SwiftUI", "Kotlin", "REST APIs", "App Store"],
   },
   {
     id: "magma-global",
-    period: "Feb 2019 – May 2020",
+    period: "Feb 2019 – May 2020 · Remote / Beirut",
     company: "Magma Global",
     title: "Mobile Application Developer",
     summary:
-      "Built native iOS and Android apps with Swift and Kotlin — API integration, authentication, stability improvements, and crash reduction.",
-    stack: ["Swift", "Kotlin", "iOS", "Android", "REST APIs", "JWT"],
+      "Native iOS (Swift/UIKit) and Android (Java/Kotlin) apps — authentication, REST APIs, maps, push notifications, production releases, and client delivery.",
+    stack: ["Swift", "UIKit", "Kotlin", "Java", "REST APIs", "Push notifications"],
   },
   {
     id: "creapix",
-    period: "Mar 2018 – Feb 2019",
+    period: "Mar 2018 – Feb 2019 · Beirut, Lebanon",
     company: "CreaPix",
     title: "Full-Stack Developer",
     summary:
-      "Delivered PHP/Laravel applications with optimized database schemas and secure, maintainable backend features.",
-    stack: ["PHP", "Laravel", "MySQL", "JavaScript"],
+      "PHP/Laravel web applications, admin panels, authentication, database schemas, REST integrations, and client-facing features.",
+    stack: ["PHP", "Laravel", "JavaScript", "MySQL", "Admin panels"],
   },
   {
     id: "dreamwd",
-    period: "Feb 2016 – Feb 2018",
+    period: "Feb 2016 – Feb 2018 · Doha, Qatar",
     company: "DreamWD",
     title: "Mobile Application Developer",
     summary:
-      "Developed Swift iOS and Kotlin/Android apps — API integration, UI implementation, and maintainable mobile architecture.",
-    stack: ["Swift", "Kotlin", "iOS", "Android", "REST APIs"],
+      "Early mobile role building iOS (Swift) and Android (Java/Kotlin) applications with REST API integration, authentication, and production support.",
+    stack: ["Swift", "iOS", "Java", "Kotlin", "REST APIs"],
   },
 ];
 
@@ -527,8 +527,8 @@ export const headerNavSecondary = [
   { id: "shipped", label: "Shipped Apps" },
 ] as const;
 
-/** Short line under name in header — avoid long subtitle truncation */
-export const headerRoleLine = "Senior iOS Engineer";
+/** Short line under name in header */
+export const headerRoleLine = "Senior software engineer · APIs, mobile & platforms";
 
 export const loadedModules = [
   "SWIFT",

@@ -31,8 +31,9 @@ export function ContactSection() {
         >
           <p className="mb-2 text-xl font-semibold text-on-surface">Let&apos;s connect</p>
           <p className="mb-6 max-w-2xl text-sm leading-relaxed text-on-surface-variant">
-            Open to English-speaking iOS, Mobile, PHP Backend, Laravel, Symfony, and API Engineering roles across
-            Germany and Europe. {site.workMode}. {site.availabilityDetail}
+            Open to English-speaking iOS Developer, Senior iOS Engineer, Mobile Engineer, PHP Developer,
+            Laravel Developer, Symfony Developer, Backend Developer, Backend Engineer, and Software Engineer
+            roles across Germany and Europe. {site.workMode}. {site.availabilityDetail}
           </p>
 
           <div className="mb-8 flex flex-wrap gap-2.5">
