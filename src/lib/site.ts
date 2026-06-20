@@ -17,8 +17,7 @@ export const seoTitle =
 export const metaDescription =
   "Senior Mobile Engineer based in Bochum, Germany, with strong PHP/Laravel backend API experience. Swift, SwiftUI, UIKit, MVVM, REST APIs, App Store delivery, Laravel, Redis, Docker, and API contracts.";
 
-export const roleSubtitle =
-  "Senior iOS engineer with PHP/Laravel backend API depth · Germany";
+export const roleSubtitle = "Senior Software Engineer — Mobile & Backend";
 
 export const socialCardTitle = "Senior Mobile Engineer · PHP/Laravel Backend APIs";
 
@@ -537,7 +536,7 @@ export const headerNavSecondary = [
 ] as const;
 
 /** Short line under name in header */
-export const headerRoleLine = "Senior mobile engineer · PHP/Laravel APIs · Germany";
+export const headerRoleLine = "Senior Software Engineer — Mobile & Backend";
 
 export const recruiterPitch =
   "Senior engineer shipping iOS apps and PHP/Laravel API platforms — App Store releases, production backends, and clear API contracts. Bochum, Germany · English-speaking teams across DE & EU.";
