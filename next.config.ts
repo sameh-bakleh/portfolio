@@ -3,6 +3,15 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /** Hide the dev-only “N” indicator (bottom-left) — errors still surface in the overlay */
   devIndicators: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        pathname: "/sameh-bakleh/**",
+      },
+    ],
+  },
   /** Baseline security headers (applies on Vercel and any other host running `next start`) */
   async headers() {
     return [

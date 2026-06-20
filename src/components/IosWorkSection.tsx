@@ -5,6 +5,7 @@ import { iosProjects, productDomains } from "@/lib/site";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 import { SectionTitle } from "./SectionTitle";
 import { WorkProjectCard } from "./WorkProjectCard";
+import { PortfolioScreensGallery } from "./PortfolioScreensGallery";
 
 export function IosWorkSection() {
   const reduce = useReducedMotion();
@@ -16,10 +17,20 @@ export function IosWorkSection() {
       <div className="mx-auto max-w-6xl">
         <SectionTitle
           step="03"
-          kicker="Production-style iOS samples on GitHub — auth, offline UX, MVVM, and API integration patterns."
+          kicker="Flagship SwiftUI client paired with Laravel Marketplace Platform API — screenshots and GitHub proof below."
         >
           Mobile work · iOS
         </SectionTitle>
+
+        <motion.div
+          className="mb-8"
+          initial={reduce ? undefined : { opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.45 }}
+        >
+          <PortfolioScreensGallery />
+        </motion.div>
 
         <p className="mb-8 max-w-3xl text-sm leading-relaxed text-on-surface-variant">{productDomains}</p>
 

@@ -330,6 +330,75 @@ export const experience: ExperienceItem[] = [
   },
 ];
 
+export type ProjectScreenshot = { src: string; alt: string; caption: string };
+
+export const githubRawBase = "https://raw.githubusercontent.com/sameh-bakleh";
+
+export const portfolioScreenshotGalleries = [
+  {
+    id: "marketplace-ios",
+    title: "iOS Marketplace Client",
+    subtitle: "SwiftUI · MVVM · paired with Laravel Marketplace Platform API",
+    repo: "https://github.com/sameh-bakleh/ios-marketplace-product-app",
+    pairedRepo: "https://github.com/sameh-bakleh/laravel-marketplace-platform",
+    shots: [
+      {
+        src: `${githubRawBase}/ios-marketplace-product-app/main/Docs/Screenshots/01-login.png`,
+        alt: "Marketplace app login screen",
+        caption: "Sign in · demo account",
+      },
+      {
+        src: `${githubRawBase}/ios-marketplace-product-app/main/Docs/Screenshots/02-shop-catalog.png`,
+        alt: "Marketplace shop catalog",
+        caption: "Paginated catalog",
+      },
+      {
+        src: `${githubRawBase}/ios-marketplace-product-app/main/Docs/Screenshots/03-product-detail.png`,
+        alt: "Product detail screen",
+        caption: "Product detail · favorites",
+      },
+      {
+        src: `${githubRawBase}/ios-marketplace-product-app/main/Docs/Screenshots/04-favorites.png`,
+        alt: "Favorites screen",
+        caption: "Favorites sync",
+      },
+      {
+        src: `${githubRawBase}/ios-marketplace-product-app/main/Docs/Screenshots/05-account.png`,
+        alt: "Account screen",
+        caption: "Account · sign out",
+      },
+    ],
+  },
+  {
+    id: "offline-chat",
+    title: "iOS Real-Time Offline Chat",
+    subtitle: "UIKit · offline UX · message states · local persistence",
+    repo: "https://github.com/sameh-bakleh/ios-realtime-offline-chat",
+    shots: [
+      {
+        src: `${githubRawBase}/ios-realtime-offline-chat/main/Docs/Screenshots/01-inbox.png`,
+        alt: "Chat inbox",
+        caption: "Inbox",
+      },
+      {
+        src: `${githubRawBase}/ios-realtime-offline-chat/main/Docs/Screenshots/02-chat-attachments.png`,
+        alt: "Chat with attachments",
+        caption: "Chat · attachments",
+      },
+      {
+        src: `${githubRawBase}/ios-realtime-offline-chat/main/Docs/Screenshots/03-features-offline.png`,
+        alt: "Offline features",
+        caption: "Offline states",
+      },
+      {
+        src: `${githubRawBase}/ios-realtime-offline-chat/main/Docs/Screenshots/04-new-chat.png`,
+        alt: "New chat screen",
+        caption: "New conversation",
+      },
+    ],
+  },
+] as const;
+
 export type ProjectItem = {
   name: string;
   folder: string;
@@ -340,99 +409,123 @@ export type ProjectItem = {
   badge?: string;
   category: "ios" | "backend";
   proves: string[];
+  pairedRepo?: string;
+  pairedLabel?: string;
+  screenshots?: ProjectScreenshot[];
 };
 
 export const iosProjects: ProjectItem[] = [
   {
-    name: "iOS Marketplace Product App",
+    name: "iOS Marketplace Client",
     folder: "ios-marketplace-product-app/",
     description:
-      "Production-style iOS marketplace client demonstrating product listing flows, authentication, favorites, pagination, API integration, local state handling, and clean mobile architecture.",
-    stack: ["Swift", "SwiftUI", "MVVM", "REST APIs", "Authentication", "Keychain", "Pagination", "Local Cache"],
-    highlight: "iOS / Mobile",
+      "Senior-grade SwiftUI marketplace client — JWT auth, paginated REST, Keychain, favorites, MVVM, XCTest, and CI. Full-stack pair with the Laravel Marketplace Platform API.",
+    stack: ["Swift", "SwiftUI", "MVVM", "Combine", "REST", "Keychain", "XCTest"],
+    highlight: "iOS · Flagship sample",
     repo: "https://github.com/sameh-bakleh/ios-marketplace-product-app",
-    badge: "Portfolio sample",
+    pairedRepo: "https://github.com/sameh-bakleh/laravel-marketplace-platform",
+    pairedLabel: "Laravel Marketplace Platform API",
+    badge: "Full-stack pair",
     category: "ios",
     proves: [
-      "API-backed iOS product flows",
-      "Clean mobile architecture",
-      "Authentication and token handling",
-      "Listing / detail / favorites UX",
-      "Error, loading, and empty states",
+      "Production-style iOS architecture",
+      "JWT auth and Keychain storage",
+      "Paginated catalog and favorites UX",
+      "Loading, empty, and error states",
+      "Pairs with Laravel marketplace API",
     ],
+    screenshots: [...portfolioScreenshotGalleries[0].shots],
   },
   {
     name: "iOS Real-Time Offline Chat",
     folder: "ios-realtime-offline-chat/",
     description:
-      "Real-time iOS chat client focused on message states, local persistence, offline-aware UX, attachment handling, retry behaviour, and testable mobile state management.",
-    stack: ["Swift", "UIKit", "Local Persistence", "Message States", "Offline UX", "Retry Logic"],
-    highlight: "iOS / Mobile",
+      "Real-time iOS chat client — message states, local persistence, offline-aware UX, attachments, retry behaviour, and testable architecture with CI.",
+    stack: ["Swift", "UIKit", "Combine", "Local Persistence", "Offline UX", "XCTest"],
+    highlight: "iOS · Messaging",
     repo: "https://github.com/sameh-bakleh/ios-realtime-offline-chat",
     badge: "Portfolio sample",
     category: "ios",
     proves: [
-      "Real-time mobile UX",
+      "Real-time mobile UX patterns",
       "Offline-capable state handling",
       "Message lifecycle management",
       "Local storage and retry flows",
-      "Production-style chat behaviour",
     ],
+    screenshots: [...portfolioScreenshotGalleries[1].shots],
   },
 ];
 
 export const backendProjects: ProjectItem[] = [
   {
+    name: "Laravel Marketplace Platform API",
+    folder: "laravel-marketplace-platform/",
+    description:
+      "Production-style Laravel multi-vendor marketplace API — JWT, cart, orders, favorites, Redis, OpenAPI, Docker, PHPUnit, and an iOS-ready mobile contract.",
+    stack: ["Laravel", "PHP", "JWT", "Redis", "OpenAPI", "Docker", "PHPUnit"],
+    highlight: "Backend · Flagship API",
+    repo: "https://github.com/sameh-bakleh/laravel-marketplace-platform",
+    pairedRepo: "https://github.com/sameh-bakleh/ios-marketplace-product-app",
+    pairedLabel: "iOS Marketplace Client",
+    badge: "Full-stack pair",
+    category: "backend",
+    proves: [
+      "Multi-vendor marketplace REST API",
+      "JWT auth and mobile-ready contracts",
+      "Cart, checkout, and order workflows",
+      "Redis caching and OpenAPI docs",
+      "Docker + CI for reproducible review",
+    ],
+  },
+  {
     name: "Laravel Recruitment Platform API",
     folder: "laravel-recruitment-platform-api/",
     description:
-      "Laravel recruitment platform API covering job listings, candidate applications, employer workflows, authentication, RBAC, validation, caching, and API documentation.",
-    stack: ["Laravel", "PHP", "REST APIs", "RBAC", "MySQL", "Redis", "OpenAPI", "Docker"],
-    highlight: "Backend / API",
+      "Laravel recruitment platform API — authentication, RBAC, job listings, applications, Redis caching, OpenAPI docs, tests, Docker, and CI.",
+    stack: ["Laravel", "PHP", "REST", "RBAC", "Redis", "OpenAPI", "Docker"],
+    highlight: "Backend · Platform",
     repo: "https://github.com/sameh-bakleh/laravel-recruitment-platform-api",
     badge: "Portfolio sample",
     category: "backend",
     proves: [
-      "Backend platform workflows",
+      "ATS-style backend workflows",
       "Auth and role-based access",
       "API resources and validation",
-      "Caching and database-backed features",
-      "Mobile-ready API contracts",
+      "Caching and reporting features",
     ],
   },
   {
     name: "Booking System API",
     folder: "booking-system-api-showcase/",
     description:
-      "Laravel booking API demonstrating reservation workflows, availability checks, validation, API versioning, caching, and testable backend logic.",
-    stack: ["Laravel", "PHP", "JWT / Sanctum", "Redis", "Swagger", "Docker"],
-    highlight: "Backend / API",
+      "Laravel booking API — auth, reservation workflows, availability checks, API versioning, Redis caching, Swagger docs, tests, Docker, and CI.",
+    stack: ["Laravel", "PHP", "MySQL", "Redis", "Swagger", "Docker"],
+    highlight: "Backend · Workflows",
     repo: "https://github.com/sameh-bakleh/booking-system-api-showcase",
     badge: "Portfolio sample",
     category: "backend",
     proves: [
-      "Booking workflow logic",
-      "Availability and validation flows",
-      "API versioning",
-      "Backend testing and documentation",
+      "Overlap-safe booking logic",
+      "Availability validation flows",
+      "API versioning patterns",
+      "Documented REST surface",
     ],
   },
   {
     name: "Laravel ERP / E-Commerce Integration API",
     folder: "laravel-ecommerce-erp-integration-api/",
     description:
-      "Laravel integration API for e-commerce and ERP workflows, using webhooks, queues, retry logic, HMAC signing, audit logging, and Docker-based setup.",
+      "Laravel ERP/e-commerce integration API — webhooks, queues, HMAC signing, retry workflows, audit logging, mock ERP client, Docker, tests, and CI.",
     stack: ["Laravel", "Queues", "Webhooks", "HMAC", "Redis", "Docker", "PHPUnit"],
-    highlight: "Backend / API",
+    highlight: "Backend · Integration",
     repo: "https://github.com/sameh-bakleh/laravel-ecommerce-erp-integration-api",
     badge: "Portfolio sample",
     category: "backend",
     proves: [
-      "Integration engineering",
+      "Integration engineering patterns",
       "Async jobs and retry workflows",
-      "Webhook security",
-      "Product / stock / order sync patterns",
-      "Backend reliability mindset",
+      "Webhook security and audit logs",
+      "Product/stock/order sync design",
     ],
   },
 ];
@@ -450,17 +543,32 @@ export type GitHubProofGroup = {
 
 export const githubProofGroups: GitHubProofGroup[] = [
   {
-    label: "iOS proof",
+    label: "Full-stack pair",
     repos: [
       {
+        name: "laravel-marketplace-platform",
+        proof: "Flagship Laravel marketplace API — JWT, cart, orders, Redis, OpenAPI, iOS mobile contract.",
+        repo: "https://github.com/sameh-bakleh/laravel-marketplace-platform",
+      },
+      {
         name: "ios-marketplace-product-app",
-        proof: "API-backed SwiftUI marketplace client with auth, pagination, and MVVM architecture.",
+        proof: "SwiftUI marketplace client paired with the Laravel API — auth, pagination, MVVM, XCTest.",
         repo: "https://github.com/sameh-bakleh/ios-marketplace-product-app",
       },
+    ],
+  },
+  {
+    label: "iOS proof",
+    repos: [
       {
         name: "ios-realtime-offline-chat",
         proof: "UIKit chat client with message states, offline UX, persistence, and retry logic.",
         repo: "https://github.com/sameh-bakleh/ios-realtime-offline-chat",
+      },
+      {
+        name: "android-marketplace-client",
+        proof: "Kotlin Compose client — cross-platform API integration reference.",
+        repo: "https://github.com/sameh-bakleh/android-marketplace-client",
       },
     ],
   },
@@ -482,24 +590,19 @@ export const githubProofGroups: GitHubProofGroup[] = [
         proof: "ERP integration with webhooks, queues, HMAC signing, and audit logging.",
         repo: "https://github.com/sameh-bakleh/laravel-ecommerce-erp-integration-api",
       },
+      {
+        name: "symfony-marketplace-api",
+        proof: "Symfony marketplace REST API — JWT, Doctrine, cart, orders, OpenAPI.",
+        repo: "https://github.com/sameh-bakleh/symfony-marketplace-api",
+      },
     ],
   },
   {
-    label: "Supporting",
+    label: "Site",
     repos: [
       {
-        name: "android-marketplace-client",
-        proof: "Kotlin marketplace client — cross-platform API integration reference.",
-        repo: "https://github.com/sameh-bakleh/android-marketplace-client",
-      },
-      {
-        name: "symfony-marketplace-api",
-        proof: "Symfony marketplace REST API — JWT auth, Doctrine, cart, orders, OpenAPI.",
-        repo: "https://github.com/sameh-bakleh/symfony-marketplace-api",
-      },
-      {
         name: "portfolio",
-        proof: "This portfolio site — Next.js, TypeScript, Tailwind.",
+        proof: "This portfolio — Next.js, TypeScript, Tailwind, recruiter-focused UX.",
         repo: "https://github.com/sameh-bakleh/portfolio",
       },
     ],

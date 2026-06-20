@@ -19,7 +19,7 @@ export function BackendWorkSection() {
       <div className="mx-auto max-w-6xl">
         <SectionTitle
           step="04"
-          kicker="Laravel and Symfony APIs — auth, RBAC, caching, OpenAPI, and mobile-ready contracts."
+          kicker="Laravel-first backend samples — marketplace platform flagship, recruitment, booking, and ERP integration."
         >
           Backend · APIs
         </SectionTitle>
