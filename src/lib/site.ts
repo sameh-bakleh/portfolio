@@ -416,6 +416,25 @@ export type ProjectItem = {
 
 export const iosProjects: ProjectItem[] = [
   {
+    name: "TalentBridge — Recruitment Marketplace",
+    folder: "talentbridge/ios/",
+    description:
+      "Swift 6 + SwiftUI recruitment marketplace client using The Composable Architecture (TCA), GraphQL, async/await, Keychain, and Sentry — monorepo with Laravel GraphQL API.",
+    stack: ["Swift 6", "SwiftUI", "TCA", "GraphQL", "Keychain", "Sentry", "XCTest"],
+    highlight: "iOS · Monorepo",
+    repo: "https://github.com/sameh-bakleh/talentbridge",
+    pairedLabel: "Same repo · Laravel API",
+    badge: "iOS + API monorepo",
+    category: "ios",
+    proves: [
+      "TCA feature modules and dependency injection",
+      "GraphQL client integration on iOS",
+      "Candidate, company, and admin flows",
+      "Keychain auth and Sentry observability",
+      "Paired Laravel DDD backend in one repo",
+    ],
+  },
+  {
     name: "iOS Marketplace Client",
     folder: "ios-marketplace-product-app/",
     description:
@@ -457,6 +476,25 @@ export const iosProjects: ProjectItem[] = [
 ];
 
 export const backendProjects: ProjectItem[] = [
+  {
+    name: "TalentBridge — Laravel GraphQL API",
+    folder: "talentbridge/backend/talentbridge-api/",
+    description:
+      "Recruitment marketplace demo API — Laravel 12, GraphQL (Lighthouse), DDD-inspired modules, Sanctum, Horizon queues, Redis, Docker, PHPUnit, and Sentry.",
+    stack: ["Laravel 12", "GraphQL", "PHP 8.4", "DDD", "Horizon", "Redis", "Docker", "Sentry"],
+    highlight: "Backend · Monorepo",
+    repo: "https://github.com/sameh-bakleh/talentbridge",
+    pairedLabel: "Same repo · SwiftUI client",
+    badge: "iOS + API monorepo",
+    category: "backend",
+    proves: [
+      "GraphQL schema and resolver design",
+      "DDD-inspired domain/application layers",
+      "Recruitment workflows — jobs, applications, moderation",
+      "Horizon queues and async notifications",
+      "Paired Swift TCA client in one repo",
+    ],
+  },
   {
     name: "Laravel Marketplace Platform API",
     folder: "laravel-marketplace-platform/",
@@ -542,6 +580,16 @@ export type GitHubProofGroup = {
 };
 
 export const githubProofGroups: GitHubProofGroup[] = [
+  {
+    label: "Full-stack monorepo",
+    repos: [
+      {
+        name: "talentbridge",
+        proof: "Recruitment marketplace — Swift 6 TCA iOS + Laravel 12 GraphQL DDD API, Horizon, Sentry, CI.",
+        repo: "https://github.com/sameh-bakleh/talentbridge",
+      },
+    ],
+  },
   {
     label: "Full-stack pair",
     repos: [
@@ -679,7 +727,7 @@ export const heroRoleTabs = [
     shortLabel: "Mobile",
     title: "Senior iOS / Mobile Engineer",
     pitch: "Swift, SwiftUI, UIKit — App Store releases, MVVM, offline-ready apps.",
-    stack: ["Swift", "SwiftUI", "UIKit", "MVVM", "REST"],
+    stack: ["Swift", "SwiftUI", "TCA", "GraphQL", "UIKit", "REST"],
     cta: { label: "iOS work", href: "#ios-work" },
   },
   {
@@ -687,8 +735,8 @@ export const heroRoleTabs = [
     label: "Backend / API",
     shortLabel: "API",
     title: "Senior PHP / Laravel API Engineer",
-    pitch: "Laravel REST APIs, RBAC, Redis, admin systems, mobile-ready contracts.",
-    stack: ["Laravel", "PHP", "Symfony", "Redis", "OpenAPI"],
+    pitch: "Laravel REST & GraphQL APIs, DDD modules, RBAC, Redis, Horizon, mobile-ready contracts.",
+    stack: ["Laravel", "GraphQL", "PHP", "Redis", "Horizon", "OpenAPI"],
     cta: { label: "API work", href: "#backend-apis" },
   },
 ] as const;

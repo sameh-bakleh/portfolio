@@ -17,7 +17,7 @@ export function IosWorkSection() {
       <div className="mx-auto max-w-6xl">
         <SectionTitle
           step="03"
-          kicker="Flagship SwiftUI client paired with Laravel Marketplace Platform API — screenshots and GitHub proof below."
+          kicker="TalentBridge monorepo (TCA + GraphQL) plus SwiftUI samples — screenshots from public GitHub repos."
         >
           Mobile work · iOS
         </SectionTitle>

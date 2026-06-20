@@ -19,7 +19,7 @@ export function BackendWorkSection() {
       <div className="mx-auto max-w-6xl">
         <SectionTitle
           step="04"
-          kicker="Laravel-first backend samples — marketplace platform flagship, recruitment, booking, and ERP integration."
+          kicker="TalentBridge GraphQL monorepo plus Laravel marketplace, recruitment, booking, and ERP APIs."
         >
           Backend · APIs
         </SectionTitle>
