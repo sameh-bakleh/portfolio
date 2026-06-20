@@ -162,16 +162,6 @@ export function TerminalHeader() {
                   <NavLink key={id} id={id} label={label} active={active === id} reduce={!!reduce} />
                 ))}
 
-                {/* Experience — xl+ only to save space */}
-                <span className="hidden xl:contents">
-                  <NavLink
-                    id="experience"
-                    label="Experience"
-                    active={active === "experience"}
-                    reduce={!!reduce}
-                  />
-                </span>
-
                 {/* More dropdown */}
                 <div ref={moreRef} className="relative">
                   <button
@@ -203,17 +193,7 @@ export function TerminalHeader() {
                         transition={{ duration: 0.15 }}
                         className="absolute right-0 top-full z-50 mt-2 min-w-[10.5rem] overflow-hidden rounded-xl border border-outline-variant/50 bg-surface-container-high/98 py-1 shadow-elevation-3 backdrop-blur-md"
                       >
-                        {/* Experience in More on lg (hidden xl since it's in bar) */}
-                        <a
-                          href="#experience"
-                          onClick={() => setMoreOpen(false)}
-                          className="block px-3 py-2 text-xs text-on-surface-variant transition hover:bg-primary/10 hover:text-on-surface xl:hidden"
-                        >
-                          Experience
-                        </a>
-                        {headerNavSecondary
-                          .filter((item) => item.id !== "experience")
-                          .map(({ id, label }) => (
+                        {headerNavSecondary.map(({ id, label }) => (
                             <a
                               key={id}
                               href={`#${id}`}

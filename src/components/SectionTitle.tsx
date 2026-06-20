@@ -26,7 +26,7 @@ export function SectionTitle({ children, step, kicker }: Props) {
           </motion.span>
         ) : null}
         <motion.h2
-          className="text-[1.375rem] font-medium leading-snug tracking-tight text-on-surface sm:text-2xl sm:leading-snug"
+          className="text-xl font-semibold leading-snug tracking-tight text-on-surface sm:text-2xl"
           initial={reduce ? undefined : { opacity: 0, x: -14 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-80px" }}

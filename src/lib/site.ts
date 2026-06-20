@@ -509,35 +509,55 @@ export const githubProofGroups: GitHubProofGroup[] = [
 
 export const navItems = [
   { id: "home", label: "Home", file: "main.ts" },
-  { id: "about", label: "About", file: "about.md" },
+  { id: "experience", label: "Experience", file: "experience.git" },
   { id: "ios-work", label: "iOS", file: "ios/" },
   { id: "backend-apis", label: "APIs", file: "backend/" },
-  { id: "skills", label: "Skills", file: "skills.json" },
-  { id: "experience", label: "Experience", file: "experience.git" },
-  { id: "github-proof", label: "GitHub", file: "proof/" },
   { id: "shipped", label: "Shipped", file: "live/refs" },
+  { id: "skills", label: "Skills", file: "skills.json" },
+  { id: "about", label: "About", file: "about.md" },
+  { id: "github-proof", label: "GitHub", file: "proof/" },
   { id: "contact", label: "Contact", file: "contact.sh" },
 ] as const;
 
-/** Primary header links — always visible on large screens */
+/** Primary header links — recruiter scan path */
 export const headerNavPrimary = [
   { id: "home", label: "Home" },
-  { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
   { id: "ios-work", label: "iOS" },
   { id: "backend-apis", label: "APIs" },
-  { id: "skills", label: "Skills" },
+  { id: "shipped", label: "Shipped" },
   { id: "contact", label: "Contact" },
 ] as const;
 
 /** Shown in header “More” menu and mobile drawer */
 export const headerNavSecondary = [
-  { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
+  { id: "about", label: "About" },
   { id: "github-proof", label: "GitHub Proof" },
-  { id: "shipped", label: "Shipped Apps" },
 ] as const;
 
 /** Short line under name in header */
-export const headerRoleLine = "Senior software engineer · APIs, mobile & platforms";
+export const headerRoleLine = "Senior mobile engineer · PHP/Laravel APIs · Germany";
+
+export const recruiterPitch =
+  "Senior engineer shipping iOS apps and PHP/Laravel API platforms — App Store releases, production backends, and clear API contracts. Bochum, Germany · English-speaking teams across DE & EU.";
+
+export const recruiterBrief = {
+  current: {
+    company: "BrainyCode Tech",
+    title: "Senior Software Engineer — Mobile & Backend",
+    period: "Jan 2025 – Present",
+  },
+  recentEmployers: ["Forsa.sy", "AnorizonTech", "Cloud Systems SARL", "Magma Global"],
+  scanFacts: [
+    { label: "Mobile", value: "5+ yrs · Swift · App Store" },
+    { label: "Backend", value: "5+ yrs · Laravel · REST" },
+    { label: "Total", value: "8+ yrs professional" },
+    { label: "Work auth", value: "Chancenkarte → permit" },
+    { label: "Languages", value: "EN · AR · DE (A2)" },
+    { label: "Availability", value: "Remote · Hybrid · On-site" },
+  ],
+} as const;
 
 export const loadedModules = [
   "SWIFT",

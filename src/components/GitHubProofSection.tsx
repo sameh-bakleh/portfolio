@@ -18,10 +18,10 @@ export function GitHubProofSection() {
     >
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          step="06"
-          kicker="GitHub is organized as proof repositories — not random demos. Each repo supports iOS or backend hiring conversations."
+          step="08"
+          kicker="Public repositories grouped by hiring conversation — mobile, backend, and cross-platform proof."
         >
-          $ gh repo list --proof
+          GitHub proof
         </SectionTitle>
 
         <motion.div

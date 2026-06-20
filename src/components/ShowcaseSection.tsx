@@ -39,10 +39,10 @@ export function ShowcaseSection() {
     <section id="shipped" className="scroll-mt-24 border-b border-outline-variant/35 px-4 py-20 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          step="07"
-          kicker="Shipped App Store products and selected live platforms — production experience, not public source code."
+          step="05"
+          kicker="App Store and Play releases — ride-hailing, recruitment, and real estate products in production."
         >
-          ## Shipped<span className="text-on-surface-variant">/live</span>
+          Shipped products
         </SectionTitle>
 
         <motion.div

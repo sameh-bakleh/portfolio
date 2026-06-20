@@ -14,10 +14,10 @@ export function SkillsSection() {
     <section id="skills" className="scroll-mt-24 border-b border-outline-variant/35 px-4 py-20 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          step="04"
-          kicker="Grouped for recruiter scan — iOS first, backend/API depth second, no noise."
+          step="06"
+          kicker="Grouped for quick scan — mobile engineering first, backend API depth second."
         >
-          ## Skills<span className="text-on-surface-variant">.json</span>
+          Skills
         </SectionTitle>
 
         <motion.div

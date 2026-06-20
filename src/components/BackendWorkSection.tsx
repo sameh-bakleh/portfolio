@@ -18,10 +18,10 @@ export function BackendWorkSection() {
     >
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          step="03"
-          kicker="Strong secondary focus — Laravel and Symfony APIs with auth, validation, caching, and OpenAPI."
+          step="04"
+          kicker="Laravel and Symfony APIs — auth, RBAC, caching, OpenAPI, and mobile-ready contracts."
         >
-          ## Featured<span className="text-on-surface-variant">/backend-apis</span>
+          Backend · APIs
         </SectionTitle>
 
         <motion.div

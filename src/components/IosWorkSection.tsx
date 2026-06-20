@@ -15,10 +15,10 @@ export function IosWorkSection() {
     <section id="ios-work" className="scroll-mt-24 border-b border-outline-variant/35 px-4 py-20 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          step="02"
-          kicker="Featured iOS portfolio samples — production-style patterns recruiters can review on GitHub."
+          step="03"
+          kicker="Production-style iOS samples on GitHub — auth, offline UX, MVVM, and API integration patterns."
         >
-          ## Featured<span className="text-on-surface-variant">/ios-work</span>
+          Mobile work · iOS
         </SectionTitle>
 
         <p className="mb-8 max-w-3xl text-sm leading-relaxed text-on-surface-variant">{productDomains}</p>
