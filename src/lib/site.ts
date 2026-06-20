@@ -537,6 +537,7 @@ export const headerNavSecondary = [
 
 /** Short line under name in header */
 export const headerRoleLine = "Senior Software Engineer — Mobile & Backend";
+export const headerRoleShort = "Sr. Engineer · Mobile & Backend";
 
 export const recruiterPitch =
   "Senior engineer shipping iOS apps and PHP/Laravel API platforms — App Store releases, production backends, and clear API contracts. Bochum, Germany · English-speaking teams across DE & EU.";
@@ -557,6 +558,39 @@ export const recruiterBrief = {
     { label: "Availability", value: "Remote · Hybrid · On-site" },
   ],
 } as const;
+
+/** Hero role tabs — recruiter picks the hiring lane in one click */
+export const heroRoleTabs = [
+  {
+    id: "both",
+    label: "Mobile & Backend",
+    shortLabel: "Both",
+    title: "Senior Software Engineer — Mobile & Backend",
+    pitch: "Full-stack product delivery — iOS clients and Laravel APIs, end to end.",
+    stack: ["Swift", "Laravel", "REST", "Docker", "CI/CD"],
+    cta: { label: "Experience", href: "#experience" },
+  },
+  {
+    id: "mobile",
+    label: "Mobile / iOS",
+    shortLabel: "Mobile",
+    title: "Senior iOS / Mobile Engineer",
+    pitch: "Swift, SwiftUI, UIKit — App Store releases, MVVM, offline-ready apps.",
+    stack: ["Swift", "SwiftUI", "UIKit", "MVVM", "REST"],
+    cta: { label: "iOS work", href: "#ios-work" },
+  },
+  {
+    id: "backend",
+    label: "Backend / API",
+    shortLabel: "API",
+    title: "Senior PHP / Laravel API Engineer",
+    pitch: "Laravel REST APIs, RBAC, Redis, admin systems, mobile-ready contracts.",
+    stack: ["Laravel", "PHP", "Symfony", "Redis", "OpenAPI"],
+    cta: { label: "API work", href: "#backend-apis" },
+  },
+] as const;
+
+export type HeroRoleTabId = (typeof heroRoleTabs)[number]["id"];
 
 export const loadedModules = [
   "SWIFT",

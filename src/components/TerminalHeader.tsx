@@ -7,6 +7,7 @@ import {
   headerNavPrimary,
   headerNavSecondary,
   headerRoleLine,
+  headerRoleShort,
   navItems,
   site,
 } from "@/lib/site";
@@ -145,7 +146,10 @@ export function TerminalHeader() {
               <span className="truncate text-sm font-medium leading-tight tracking-tight text-on-surface">
                 {site.name}
               </span>
-              <span className="truncate text-[11px] leading-tight text-on-surface-variant">
+              <span className="truncate text-[11px] leading-tight text-on-surface-variant xl:hidden">
+                {headerRoleShort}
+              </span>
+              <span className="hidden truncate text-[11px] leading-tight text-on-surface-variant xl:inline">
                 {headerRoleLine}
               </span>
             </span>
