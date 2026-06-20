@@ -19,7 +19,7 @@ export function GitHubProofSection() {
       <div className="mx-auto max-w-6xl">
         <SectionTitle
           step="08"
-          kicker="Public repositories grouped by hiring conversation — mobile, backend, and cross-platform proof."
+          kicker="Mirrors github.com/sameh-bakleh — GraphQL pair, REST pair, mobile, backend, and monorepo variant."
         >
           GitHub proof
         </SectionTitle>

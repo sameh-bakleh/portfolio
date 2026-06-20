@@ -1,7 +1,7 @@
 /** Site content — edit social URLs here before deploy */
 
 export const headline =
-  "Senior Software Engineer | iOS & PHP Backend | Swift · SwiftUI · UIKit · Laravel · Symfony · REST APIs | Germany";
+  "Senior Software Engineer | iOS & PHP Backend | Swift · Laravel · GraphQL · REST APIs | Germany";
 
 export const heroSubtitle =
   "Hands-on Senior Software Engineer in Bochum with 5+ years in iOS/Swift mobile engineering and 5+ years in PHP/Laravel API and admin systems — production apps, backend platforms, API contracts, and release-ready delivery across Germany and Europe.";
@@ -416,35 +416,36 @@ export type ProjectItem = {
 
 export const iosProjects: ProjectItem[] = [
   {
-    name: "TalentBridge — Recruitment Marketplace",
-    folder: "talentbridge/ios/",
+    name: "TalentBridge iOS",
+    folder: "talentbridge-ios/",
     description:
-      "Swift 6 + SwiftUI recruitment marketplace client using The Composable Architecture (TCA), GraphQL, async/await, Keychain, and Sentry — monorepo with Laravel GraphQL API.",
-    stack: ["Swift 6", "SwiftUI", "TCA", "GraphQL", "Keychain", "Sentry", "XCTest"],
-    highlight: "iOS · Monorepo",
-    repo: "https://github.com/sameh-bakleh/talentbridge",
-    pairedLabel: "Same repo · Laravel API",
-    badge: "iOS + API monorepo",
+      "Swift 6 iOS client for the TalentBridge recruitment marketplace — consumes the GraphQL backend (talentbridge-api) with TCA, clean architecture, Keychain, and XCTest.",
+    stack: ["Swift 6", "SwiftUI", "TCA", "GraphQL", "Keychain", "XCTest"],
+    highlight: "iOS · Flagship GraphQL",
+    repo: "https://github.com/sameh-bakleh/talentbridge-ios",
+    pairedRepo: "https://github.com/sameh-bakleh/talentbridge-api",
+    pairedLabel: "TalentBridge GraphQL API",
+    badge: "GraphQL pair",
     category: "ios",
     proves: [
-      "TCA feature modules and dependency injection",
-      "GraphQL client integration on iOS",
+      "Swift 6 + TCA feature architecture",
+      "GraphQL client and shared API contract",
       "Candidate, company, and admin flows",
-      "Keychain auth and Sentry observability",
-      "Paired Laravel DDD backend in one repo",
+      "Keychain auth and testable dependencies",
+      "Paired Laravel GraphQL backend",
     ],
   },
   {
     name: "iOS Marketplace Client",
     folder: "ios-marketplace-product-app/",
     description:
-      "Senior-grade SwiftUI marketplace client — JWT auth, paginated REST, Keychain, favorites, MVVM, XCTest, and CI. Full-stack pair with the Laravel Marketplace Platform API.",
-    stack: ["Swift", "SwiftUI", "MVVM", "Combine", "REST", "Keychain", "XCTest"],
-    highlight: "iOS · Flagship sample",
+      "Senior-grade SwiftUI marketplace iOS client — MVVM, JWT auth, paginated REST, Keychain, favorites sync, XCTest, and CI. Pairs with laravel-marketplace-platform.",
+    stack: ["Swift", "SwiftUI", "MVVM", "REST", "Keychain", "XCTest"],
+    highlight: "iOS · Flagship REST",
     repo: "https://github.com/sameh-bakleh/ios-marketplace-product-app",
     pairedRepo: "https://github.com/sameh-bakleh/laravel-marketplace-platform",
     pairedLabel: "Laravel Marketplace Platform API",
-    badge: "Full-stack pair",
+    badge: "REST pair",
     category: "ios",
     proves: [
       "Production-style iOS architecture",
@@ -459,17 +460,17 @@ export const iosProjects: ProjectItem[] = [
     name: "iOS Real-Time Offline Chat",
     folder: "ios-realtime-offline-chat/",
     description:
-      "Real-time iOS chat client — message states, local persistence, offline-aware UX, attachments, retry behaviour, and testable architecture with CI.",
-    stack: ["Swift", "UIKit", "Combine", "Local Persistence", "Offline UX", "XCTest"],
+      "UIKit iOS chat client with message delivery states, offline queueing, local persistence, attachments, XCTest, and CI — mock transport, no API keys required.",
+    stack: ["Swift", "UIKit", "Combine", "Persistence", "Offline UX", "XCTest"],
     highlight: "iOS · Messaging",
     repo: "https://github.com/sameh-bakleh/ios-realtime-offline-chat",
     badge: "Portfolio sample",
     category: "ios",
     proves: [
-      "Real-time mobile UX patterns",
-      "Offline-capable state handling",
-      "Message lifecycle management",
-      "Local storage and retry flows",
+      "Message delivery state machine",
+      "Offline queueing and retry flows",
+      "Local persistence and attachments",
+      "Testable architecture with XCTest",
     ],
     screenshots: [...portfolioScreenshotGalleries[1].shots],
   },
@@ -477,35 +478,36 @@ export const iosProjects: ProjectItem[] = [
 
 export const backendProjects: ProjectItem[] = [
   {
-    name: "TalentBridge — Laravel GraphQL API",
-    folder: "talentbridge/backend/talentbridge-api/",
+    name: "TalentBridge GraphQL API",
+    folder: "talentbridge-api/",
     description:
-      "Recruitment marketplace demo API — Laravel 12, GraphQL (Lighthouse), DDD-inspired modules, Sanctum, Horizon queues, Redis, Docker, PHPUnit, and Sentry.",
-    stack: ["Laravel 12", "GraphQL", "PHP 8.4", "DDD", "Horizon", "Redis", "Docker", "Sentry"],
-    highlight: "Backend · Monorepo",
-    repo: "https://github.com/sameh-bakleh/talentbridge",
-    pairedLabel: "Same repo · SwiftUI client",
-    badge: "iOS + API monorepo",
+      "Production-inspired recruitment-marketplace backend — Laravel GraphQL API, authentication & RBAC, queued workflows on Redis, Pest/PHPUnit tests, Docker, and CI. Paired with Swift 6 iOS client.",
+    stack: ["Laravel", "GraphQL", "PHP 8.x", "DDD", "Horizon", "Redis", "Docker", "Pest"],
+    highlight: "Backend · Flagship GraphQL",
+    repo: "https://github.com/sameh-bakleh/talentbridge-api",
+    pairedRepo: "https://github.com/sameh-bakleh/talentbridge-ios",
+    pairedLabel: "TalentBridge iOS",
+    badge: "GraphQL pair",
     category: "backend",
     proves: [
       "GraphQL schema and resolver design",
-      "DDD-inspired domain/application layers",
-      "Recruitment workflows — jobs, applications, moderation",
-      "Horizon queues and async notifications",
-      "Paired Swift TCA client in one repo",
+      "DDD-inspired domain layers",
+      "Recruitment marketplace workflows",
+      "Horizon queues on Redis",
+      "Paired Swift TCA iOS client",
     ],
   },
   {
     name: "Laravel Marketplace Platform API",
     folder: "laravel-marketplace-platform/",
     description:
-      "Production-style Laravel multi-vendor marketplace API — JWT, cart, orders, favorites, Redis, OpenAPI, Docker, PHPUnit, and an iOS-ready mobile contract.",
+      "Production-style Laravel multi-vendor marketplace API — JWT, cart, orders, Redis, OpenAPI, Docker, and iOS mobile contract.",
     stack: ["Laravel", "PHP", "JWT", "Redis", "OpenAPI", "Docker", "PHPUnit"],
-    highlight: "Backend · Flagship API",
+    highlight: "Backend · Flagship REST",
     repo: "https://github.com/sameh-bakleh/laravel-marketplace-platform",
     pairedRepo: "https://github.com/sameh-bakleh/ios-marketplace-product-app",
     pairedLabel: "iOS Marketplace Client",
-    badge: "Full-stack pair",
+    badge: "REST pair",
     category: "backend",
     proves: [
       "Multi-vendor marketplace REST API",
@@ -519,24 +521,24 @@ export const backendProjects: ProjectItem[] = [
     name: "Laravel Recruitment Platform API",
     folder: "laravel-recruitment-platform-api/",
     description:
-      "Laravel recruitment platform API — authentication, RBAC, job listings, applications, Redis caching, OpenAPI docs, tests, Docker, and CI.",
-    stack: ["Laravel", "PHP", "REST", "RBAC", "Redis", "OpenAPI", "Docker"],
+      "ATS-style Laravel recruitment API — JWT, RBAC, job listings, applications, OpenAPI, Docker, and 45 PHPUnit tests.",
+    stack: ["Laravel", "PHP", "JWT", "RBAC", "Redis", "OpenAPI", "Docker"],
     highlight: "Backend · Platform",
     repo: "https://github.com/sameh-bakleh/laravel-recruitment-platform-api",
     badge: "Portfolio sample",
     category: "backend",
     proves: [
       "ATS-style backend workflows",
-      "Auth and role-based access",
-      "API resources and validation",
-      "Caching and reporting features",
+      "JWT auth and role-based access",
+      "Job listings and applications",
+      "OpenAPI and PHPUnit coverage",
     ],
   },
   {
     name: "Booking System API",
     folder: "booking-system-api-showcase/",
     description:
-      "Laravel booking API — auth, reservation workflows, availability checks, API versioning, Redis caching, Swagger docs, tests, Docker, and CI.",
+      "Laravel booking system API with auth, booking workflows, availability checks, API versioning, Redis caching, Swagger docs, tests, Docker, and CI.",
     stack: ["Laravel", "PHP", "MySQL", "Redis", "Swagger", "Docker"],
     highlight: "Backend · Workflows",
     repo: "https://github.com/sameh-bakleh/booking-system-api-showcase",
@@ -553,7 +555,7 @@ export const backendProjects: ProjectItem[] = [
     name: "Laravel ERP / E-Commerce Integration API",
     folder: "laravel-ecommerce-erp-integration-api/",
     description:
-      "Laravel ERP/e-commerce integration API — webhooks, queues, HMAC signing, retry workflows, audit logging, mock ERP client, Docker, tests, and CI.",
+      "Laravel ERP/e-commerce integration API with webhooks, queues, HMAC signing, retry workflows, audit logging, mock ERP client, Docker, tests, and CI.",
     stack: ["Laravel", "Queues", "Webhooks", "HMAC", "Redis", "Docker", "PHPUnit"],
     highlight: "Backend · Integration",
     repo: "https://github.com/sameh-bakleh/laravel-ecommerce-erp-integration-api",
@@ -564,6 +566,23 @@ export const backendProjects: ProjectItem[] = [
       "Async jobs and retry workflows",
       "Webhook security and audit logs",
       "Product/stock/order sync design",
+    ],
+  },
+  {
+    name: "Symfony Marketplace API",
+    folder: "symfony-marketplace-api/",
+    description:
+      "Symfony marketplace REST API — secure authentication, Doctrine entities, DTO validation, marketplace workflows, OpenAPI, Redis, Docker, and PHPUnit.",
+    stack: ["Symfony 7", "Doctrine", "JWT", "Redis", "OpenAPI", "Docker", "PHPUnit"],
+    highlight: "Backend · Symfony",
+    repo: "https://github.com/sameh-bakleh/symfony-marketplace-api",
+    badge: "Portfolio sample",
+    category: "backend",
+    proves: [
+      "Symfony 7 REST API design",
+      "Doctrine entities and DTO validation",
+      "Multi-vendor cart and orders",
+      "OpenAPI documentation",
     ],
   },
 ];
@@ -581,67 +600,77 @@ export type GitHubProofGroup = {
 
 export const githubProofGroups: GitHubProofGroup[] = [
   {
-    label: "Full-stack monorepo",
+    label: "Full-stack pair (GraphQL)",
     repos: [
       {
-        name: "talentbridge",
-        proof: "Recruitment marketplace — Swift 6 TCA iOS + Laravel 12 GraphQL DDD API, Horizon, Sentry, CI.",
-        repo: "https://github.com/sameh-bakleh/talentbridge",
+        name: "talentbridge-api",
+        proof: "Flagship Laravel GraphQL API — DDD, RBAC, Horizon, Redis, Docker, Pest/PHPUnit, CI.",
+        repo: "https://github.com/sameh-bakleh/talentbridge-api",
+      },
+      {
+        name: "talentbridge-ios",
+        proof: "Swift 6 TCA iOS client — GraphQL backend contract, Keychain, XCTest.",
+        repo: "https://github.com/sameh-bakleh/talentbridge-ios",
       },
     ],
   },
   {
-    label: "Full-stack pair",
+    label: "Full-stack pair (REST)",
     repos: [
       {
         name: "laravel-marketplace-platform",
-        proof: "Flagship Laravel marketplace API — JWT, cart, orders, Redis, OpenAPI, iOS mobile contract.",
+        proof: "Laravel marketplace API — JWT, cart, orders, Redis, OpenAPI, iOS contract.",
         repo: "https://github.com/sameh-bakleh/laravel-marketplace-platform",
       },
       {
         name: "ios-marketplace-product-app",
-        proof: "SwiftUI marketplace client paired with the Laravel API — auth, pagination, MVVM, XCTest.",
+        proof: "SwiftUI marketplace client — MVVM, auth, pagination, screenshots, XCTest.",
         repo: "https://github.com/sameh-bakleh/ios-marketplace-product-app",
       },
     ],
   },
   {
-    label: "iOS proof",
+    label: "iOS / Mobile",
     repos: [
       {
         name: "ios-realtime-offline-chat",
-        proof: "UIKit chat client with message states, offline UX, persistence, and retry logic.",
+        proof: "UIKit chat — message states, offline queueing, persistence, XCTest.",
         repo: "https://github.com/sameh-bakleh/ios-realtime-offline-chat",
       },
       {
         name: "android-marketplace-client",
-        proof: "Kotlin Compose client — cross-platform API integration reference.",
+        proof: "Kotlin Compose client — JWT, catalog, wishlist, checkout flows.",
         repo: "https://github.com/sameh-bakleh/android-marketplace-client",
       },
     ],
   },
   {
-    label: "Backend / API proof",
+    label: "Backend / APIs",
     repos: [
       {
         name: "laravel-recruitment-platform-api",
-        proof: "Laravel recruitment API with RBAC, listings, applications, and OpenAPI.",
+        proof: "ATS-style Laravel API — JWT, RBAC, listings, applications, OpenAPI.",
         repo: "https://github.com/sameh-bakleh/laravel-recruitment-platform-api",
       },
       {
         name: "booking-system-api-showcase",
-        proof: "Laravel booking workflows with availability checks and API versioning.",
+        proof: "Laravel booking — availability checks, API versioning, Swagger.",
         repo: "https://github.com/sameh-bakleh/booking-system-api-showcase",
       },
       {
         name: "laravel-ecommerce-erp-integration-api",
-        proof: "ERP integration with webhooks, queues, HMAC signing, and audit logging.",
+        proof: "ERP integration — webhooks, queues, HMAC, retry workflows.",
         repo: "https://github.com/sameh-bakleh/laravel-ecommerce-erp-integration-api",
       },
       {
         name: "symfony-marketplace-api",
-        proof: "Symfony marketplace REST API — JWT, Doctrine, cart, orders, OpenAPI.",
+        proof: "Symfony 7 marketplace REST — Doctrine, DTO validation, OpenAPI.",
         repo: "https://github.com/sameh-bakleh/symfony-marketplace-api",
+      },
+      {
+        name: "talentbridge",
+        proof: "Monorepo variant — Swift TCA iOS + Laravel GraphQL in one repository.",
+        repo: "https://github.com/sameh-bakleh/talentbridge",
       },
     ],
   },
@@ -691,7 +720,7 @@ export const headerRoleLine = "Senior Software Engineer — Mobile & Backend";
 export const headerRoleShort = "Sr. Engineer · Mobile & Backend";
 
 export const recruiterPitch =
-  "Senior engineer shipping iOS apps and PHP/Laravel API platforms — App Store releases, production backends, and clear API contracts. Bochum, Germany · English-speaking teams across DE & EU.";
+  "Senior engineer shipping iOS apps and Laravel APIs — GraphQL & REST, App Store releases, DDD backends, and mobile-ready contracts. Bochum, Germany · English-speaking teams across DE & EU.";
 
 export const recruiterBrief = {
   current: {
@@ -702,7 +731,7 @@ export const recruiterBrief = {
   recentEmployers: ["Forsa.sy", "AnorizonTech", "Cloud Systems SARL", "Magma Global"],
   scanFacts: [
     { label: "Mobile", value: "5+ yrs · Swift · App Store" },
-    { label: "Backend", value: "5+ yrs · Laravel · REST" },
+    { label: "Backend", value: "5+ yrs · Laravel · GraphQL" },
     { label: "Total", value: "8+ yrs professional" },
     { label: "Work auth", value: "Chancenkarte → permit" },
     { label: "Languages", value: "EN · AR · DE (A2)" },
@@ -717,8 +746,8 @@ export const heroRoleTabs = [
     label: "Mobile & Backend",
     shortLabel: "Both",
     title: "Senior Software Engineer — Mobile & Backend",
-    pitch: "Full-stack product delivery — iOS clients and Laravel APIs, end to end.",
-    stack: ["Swift", "Laravel", "REST", "Docker", "CI/CD"],
+    pitch: "Full-stack delivery — Swift TCA iOS, Laravel GraphQL & REST APIs, Docker, CI.",
+    stack: ["Swift", "TCA", "Laravel", "GraphQL", "REST", "Docker"],
     cta: { label: "Experience", href: "#experience" },
   },
   {
@@ -726,7 +755,7 @@ export const heroRoleTabs = [
     label: "Mobile / iOS",
     shortLabel: "Mobile",
     title: "Senior iOS / Mobile Engineer",
-    pitch: "Swift, SwiftUI, UIKit — App Store releases, MVVM, offline-ready apps.",
+    pitch: "Swift 6, SwiftUI, TCA, GraphQL & REST — App Store releases and testable mobile architecture.",
     stack: ["Swift", "SwiftUI", "TCA", "GraphQL", "UIKit", "REST"],
     cta: { label: "iOS work", href: "#ios-work" },
   },

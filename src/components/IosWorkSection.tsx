@@ -17,7 +17,7 @@ export function IosWorkSection() {
       <div className="mx-auto max-w-6xl">
         <SectionTitle
           step="03"
-          kicker="TalentBridge monorepo (TCA + GraphQL) plus SwiftUI samples — screenshots from public GitHub repos."
+          kicker="Flagship GraphQL pair (TalentBridge) + REST marketplace client — screenshots from GitHub repos."
         >
           Mobile work · iOS
         </SectionTitle>
